@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="feedID">
+	<head>
+		<title>FeedID</title>
+		<link href="css/layout_banner.css" rel="stylesheet" type="text/css" />
+		<link href="css/layout_search.css" rel="stylesheet" type="text/css" />
+
+        <link id="bs-css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="banner">
+			<!-- SITE LOGO -->
+			<a href="#/"><img id="logo" alt="Logo" src="./img/img_logo.png"></a>
+			<!-- BANNER WHEN NOT LOGGED IN -->
+			<div id="login" ng-show="!loggedin">
+				<form ng-submit="login()">
+					<table>
+						<tr>
+							<td>E-mailadres</td>
+							<td>Wachtwoord</td>
+							<td class="separator">&nbsp;</td>
+						</tr>
+						<tr>
+							<td><input type="text" path="email" ng-model="user.username"/></td>
+							<td><input type="password" path="password" ng-model="user.pass" /></td>
+							<td class="separator"><button type="submit">Aanmelden</button></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<!-- BANNER WHEN LOGGED IN -->
+			<div class="menu" ng-show="loggedin">
+				<div class="separator" id="loginuser">
+					<a href="#/user/{{currentUser._id}}/{{app._id}}">
+					<img alt="profile picture" src="https://feedid.com/backend/images/{{currentUser.picture}}" />
+					<p>
+						{{currentUser.firstname}}<br />
+						{{currentUser.lastname}}
+					</p>
+					</a>
+				</div>
+				<div id="logout" class="item">
+					<img ng-click="logout()" alt="Logout" src="./icons/ic_logout.png">
+				</div>
+				<div class="wrap" id="search" ng-controller="SearchCtrl">
+					<input id="input" placeholder=' ' type='text' ng-change='filterUsers()' ng-model="query" />
+					<ul id='filterlist' ng-show="query">
+						<li ng-repeat='user in searchUsers' ng-click="clear()"><a href='#/user/{{user._id}}/{{app._id}}'>{{user.firstname}} {{user.lastname}}</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+        <div ng-view>
+        </div>
+        <script src="scripts/main.js" type="text/javascript"></script>
+	</body>
+</html>

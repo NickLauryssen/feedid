@@ -1,0 +1,112 @@
+<link href="./css/layout_main.css" rel="stylesheet" type="text/css" />
+<link href="./css/layout_register.css" rel="stylesheet" type="text/css" />
+<script src="./js/navigate.js"  type="text/javascript"></script>
+<link href="./css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" media="screen" />
+<script>
+    $(function() {
+        $( ".datepicker" ).datepicker({
+            format: "dd/mm/yyyy",
+            defaultViewDate: { year: 1990, month: 01, day: 01 },
+            startView: 2,
+            autoclose: true
+        });
+    });
+</script>
+<div id="register" class="content">
+    <form ng-submit="confirm()">
+        <div id="progressbar">
+            <div class="step">
+                <img class="active" id="s1" alt="Stap 1" src="./img/ic_register1.png" />
+            </div>
+            <div class="line"></div>
+            <div class="step">
+                <img class="inactive" id="s2" alt="Stap 2" src="./img/ic_register2.png" />
+            </div>
+            <div class="line"></div>
+            <div class="step">
+                <img class="inactive" id="s3" alt="Stap 3" src="./img/ic_register3.png" />
+            </div>
+        </div>
+        <div class="info" id="step1">
+            <h2>Stap 1: Contactgegevens van {{user.firstname}} {{user.lastname}}</h2>
+            <table>
+                <tr>
+                    <td><label class="control-label">Voornaam</label></td>
+                    <td><input type="text" placeholder="Voornaam" ng-model="user.firstname" class="length4" /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label">Achternaam</label></td>
+                    <td><input type="text" placeholder="Achternaam" ng-model="user.lastname" class="length4" /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label">Geslacht</label></td>
+                    <td><select ng-model="user.sex" ng-options="sex for sex in ['Man','Vrouw']"class="length4" ></select></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label">Geboortedatum</label></td>
+                    <td><input type="text" ng-model="user.dateofbirth" class="datepicker length4"  /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label">Straat + huisnummer</label></td>
+                    <td><input type="text" placeholder="Straat" ng-model="user.street" class="length3" />
+                        <input type="text" placeholder="Huisnummer" ng-model="user.number" class="length1" /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label">Postcode</label></td>
+                    <td><input type="text" placeholder="Postcode" ng-model="user.postal_code" class="length4" /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label">Woonplaats</label></td>
+                    <td><input type="text" placeholder="Woonplaats" ng-model="user.city" class="length4" /></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label">Land</label></td>
+                    <td><select ng-model="user.country" ng-options="c.country as c.country for c in countries | orderBy:country_code" class="length4"></select></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label">Mobiel</label></td>
+                    <td><input type="text" placeholder="Mobiel" ng-model="user.mobile" class="length4" /></td>
+                </tr>
+            
+            </table>
+        </div>
+        <div class="info" id="step2" flow-init="{target:'https://feedid.com/backend/images/upload', singleFile:true, testChunks:true}">
+            <h2>Stap 2: Profielfoto selecteren</h2>
+            <div ng-controller="UploadCtrl">
+                <div class="thumbnail" ng-show="!$flow.files.length">
+                    <img src="./img/img_profilepicture.png" />
+                </div>
+                <div class="progress" ng-show="$flow.isUploading()">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                        <span class="sr-only">Uploading..</span>
+                    </div>
+                </div><br />
+                <div class="thumbnail" ng-show="$flow.files.length">
+                    <img flow-img="$flow.files[0]" />
+                </div>
+                <span class="btn up btn-primary ng-hide" ng-show="!$flow.files.length" flow-btn="">
+                    Profielfoto instellen<input style="visibility: hidden; position: absolute;" type="file">
+                </span>
+                <span class="btn up btn-info ng-hide" ng-show="$flow.files.length" flow-btn="">
+                    Wijzig<input style="visibility: hidden; position: absolute;" type="file">
+                </span>
+                <span class="btn up ng-hide" ng-show="$flow.files.length" ng-click="$flow.upload()">
+                    Upload
+                </span>
+            </div>
+        </div>
+        <div class="info" id="step3">
+            <h2>Stap 3: Accountbevestiging</h2>
+            Proficiat, uw profiel is aangemaakt.<br /> U hoeft enkel nog uw paswoord in te stellen: <br /><br />
+            <div class="control-group">
+                <label class="control-label">Paswoord</label>
+                <input  type="password" name="password" id="email" placeholder="Paswoord" ng-model="user.password"/><br />
+            </div>
+            <br /> <input class="btn up btn-primary" type="submit" value="Bevestig uw account" />
+        </div>
+        <div id="arrow_buttons">
+            <img id="arrow_previous" alt="Vorige" src="./img/ic_arrow_left.png" onclick="back();" /> 
+            <img id="arrow_next" alt="Volgende" src="./img/ic_arrow_right.png" onclick="next();" />
+        </div>
+    </form>
+</div>

@@ -1,0 +1,50 @@
+.wrap {
+  padding-top: 0;
+  top:0;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#input {
+  width: 190px;
+  line-height: 25px;
+  border: 1px solid #C3D0DB;
+  margin: 0;
+  padding-left: 10px;
+  outline: none;
+  display: block;
+  float: left;
+  padding-right: 20px;
+  background: #ffffff url('../icons/ic_search.png') no-repeat scroll right center;
+  background-size: 15px 15px;
+}
+
+input:focus {
+  border-width: 2px;
+  position: relative;
+  top: -1px;
+  left: -1px;
+}
+
+.wrap ul {
+  padding-left: 10px;
+  border: 1px solid #C3D0DB;
+  line-height: 25px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  width: 193px;
+  top: -1px;
+  left: -1px;
+  list-style-type: none;
+}
+
+.wrap li a {
+	text-decoration: none !important;
+	color: black !important;
+}
+
+.wrap li a:hover {
+	color: gray !important;
+}

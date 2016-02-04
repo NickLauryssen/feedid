@@ -1,0 +1,176 @@
+@CHARSET "ISO-8859-1";
+
+
+#banner{
+	margin: 0px;
+	padding: 10px 20px;
+	height: 70px;
+	background-color: #28444b;
+	color: #ffffff;
+	overflow: hidden;
+	z-index: -1;
+}
+
+#banner .menu {
+	margin-left: 200px ;
+}
+
+#logo {
+	height: 35px;
+	margin: 5px 20px 0px 0px;
+	font-size: 30pt;
+	font-family: century gothic;
+	float: left;
+}
+
+#banner .item{
+	height: 45px;
+	width: 70px;
+	padding: 0px;
+	margin: 0px 5px;
+	float: left;
+}
+
+#banner .item img:hover{
+	opacity:0.6;
+	filter:alpha(opacity=60); /* For IE8 and earlier */	
+	cusor: pointer;
+	cursor: hand;
+}
+
+#banner .item img{
+	max-height: 30px;
+	max-width: 30px;
+	margin-left: 20px;
+	padding: 0px;
+}
+
+#banner .item p{
+	font-size: 8pt;
+	text-align: center;
+	margin: 5px 0px 0px 0px;
+	padding: 0px;
+}
+
+#banner .separator{
+	border-left: 1px solid #53696F;
+	margin-left: 15px;
+	padding: 0px 0px 0px 15px;
+	height: 45px;
+	float: left;
+}
+
+#banner #search{
+	height: 45px;
+	width: 160px;
+}
+
+#banner #search {
+	position: absolute;
+	margin-left: 350px;
+}
+
+#banner #search #input{
+	margin: 12px 0px 0px 0px;
+	display: block;
+	float: left;
+	padding-right: 20px;
+}
+
+#banner #loginuser{
+	width: 160px;
+}
+
+#banner #loginuser img{
+	width: 35px;
+	height: 35px;
+	float: left;
+	margin: 5px 5px 5px 0px;
+}
+
+#banner #loginuser .options{
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin: 8px 8px 8px 3px;
+}
+
+#banner #loginuser p{
+	font-size: 12px;
+	float: left;
+	margin: 5px 5px 5px 5px;
+}
+
+/* LOGIN */
+
+#login {
+	float: right;
+	padding: 0px;
+	width: 520px;
+}
+
+#login table{
+	margin-top: 4px;
+	border-spacing: 0px;
+}
+
+#login tr{
+	padding: 0px;
+	margin: 0px;
+}
+
+#login td {
+	color: white;
+	padding: 0px;
+	margin: 0px;
+	font-size: 8pt;
+}
+
+#login input{
+	display: block;
+	margin-right: 15px;
+	margin-top: 5px;
+}
+
+#login input[type="submit"] {
+	display: block;
+	margin-right: 0px;
+}
+
+#createProfile {
+	color: white;
+	border: none;
+	background: #7F878A;
+	width: 150px;
+	height: 22px;
+	border-radius: 2px;
+}
+
+#createProfile:hover {
+	background: #6F777A;
+}
+
+#banner #login .separator{
+	height: auto;
+}
+
+#banner a{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#banner a img{
+	border: 0px;
+}
+
+#logout, #loginuser {
+	float: right !important;
+}
+
+#logout img {
+	margin-top: 8px;
+}
+
+#logout {
+	width: 50px !important;
+}

@@ -1,0 +1,130 @@
+@CHARSET "ISO-8859-1";
+
+#content-background{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	z-index: -10;
+	width: 100%px;
+	background-color: #eeeeee;
+}
+
+#content{
+	z-index: -1;
+	background-color: #eeeeee;
+}
+
+#sidemenu {
+	float: left;
+}
+
+#sidemenu .profilepicture{
+	height: 100px;
+	width: 100px;
+}
+
+#sidemenu h1{
+	color: #016CA4;
+	font-size: 12pt;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+#sidemenu h2{
+	color: #497984;
+	font-size: 10pt;
+	text-decoration: none;
+	font-weight: normal;
+	margin: 0px 0px 5px 0px;
+}
+
+#sidemenu p{
+	color: #28444B;
+	font-size: 10pt;
+	margin: 0px 0px 5px 30px;
+}
+
+#content-page {
+	overflow: auto;
+	padding-left: 5%;
+}
+
+#content-page h2 {
+    margin-bottom: 20px;
+}
+
+.administrator label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 200px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.administrator input, select {
+    display: inline-block;
+    float: left;
+}
+
+#btn_register {
+    clear: both;
+    float: left;
+}
+
+/* Edit profile */
+#editor {
+    font-size: 8pt;
+    display: inline;
+}
+
+#editor p {
+    font-size: 8pt;
+}
+
+#editor button {
+    margin-top: 8px;
+}
+
+#sidemenu .link {
+
+}
+
+#sidemenu .link:hover {
+    text-decoration: underline;
+    color: gray;
+    cursor: pointer;
+}
+
+#btn_register {
+    margin-top: 20px;
+}
+
+.up {
+    margin-right: 10px;
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4;
+    border-radius: 4px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 13px;
+    background: #1D99DE;
+    padding: 5px 10px 5px 10px;
+    margin: 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.up:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+

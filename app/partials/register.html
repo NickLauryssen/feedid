@@ -1,0 +1,78 @@
+<link href="./css/layout_main.css" rel="stylesheet" type="text/css" />
+<link href="./css/layout_register.css" rel="stylesheet" type="text/css" />
+<style type="text/css" >
+  input.ng-valid {
+    border: 1px solid gray;
+    color:Green;
+  }
+  .hide{
+    visibility: hidden;
+  }
+  #errorBox{
+    position: absolute;
+    left:auto;
+    top:30%;
+    width:250px;
+    padding: 5px 10px;
+    background-color: #E0E0E0;
+    box-shadow: 0px 0px 3px #888;
+    border-radius: 10px;
+  }
+  .redBox {
+    border:1px solid Red;
+  }
+  .eButton {
+    border-radius: 5px;
+    background-color: Red;
+    clear:both;
+    width: 35px;
+    text-align: center;
+    margin:5px auto;
+  }
+  .infoText{
+    clear:both;
+    font-size:10pt;
+    color:gray;
+  }
+</style>
+<h1>Profiel aanmaken</h1>
+<form name="regForm" ng-submit="register()" novalidate>
+  <p>
+    <label class="control-label">Voornaam</label>
+   <input type="text" name="firstname" id="firstname" placeholder="Voornaam" ng-model="user.firstname" required />
+  </p>
+  <p>
+    <label class="control-label">Achternaam</label>
+   <input type="text" name="lastname" id="lastname" placeholder="Achternaam" class="form-control" ng-model="user.lastname" required />
+  </p>
+  <p>
+    <label class="control-label">E-mailadres</label>
+   <input  type="email" name="email" id="email" placeholder="E-mailadres" class="form-control" ng-model="user.email" required/><br />
+   <a class="infoText" ng-show="regForm.email.$invalid" ng-style="infoTextF">vb:'naam@yahoo.com'</a>
+  </p>
+  <p>
+    <label class="control-label">Wachtwoord</label>
+   <input type="password" ng-model="user.password" id="pw1" name="pw1" placeholder="Wachtwoord" ng-minlength="8" required/><br />
+   <a class="infoText" ng-show="regForm.pw1.$error.minlength || regForm.pw1.$invalid" ng-style="infoTextF">Wachtwoord moet minimum 8 tekens lang zijn.</a>
+  </p>
+  <p>
+    <label class="control-label">Bevestig wachtwoord</label>
+    <input type="password" id="pw2" name="pw2" ng-model="pw2" password-match="user.password" placeholder="Wachtwoord opnieuw" required /><br/>
+    <a class="infoText" ng-show="regForm.pw2.$invalid" ng-style="infoTextF">Geef wachtwoord opnieuw in.</a>
+
+  </p>
+  <p>
+    <button type="submit" ng-click="infoTextF={color:'red'}" class="btn btn-primary">Maak profiel aan</button>
+  </p>
+</form>
+<!-- <div id="errorBox" ng-show="">
+  <h3>Invalid values: </h3>
+  <div id="errorMsgs">
+  <p ng-show="(regForm.firstname.$invalid || regForm.lastname.$invalid) && submitted"  class="help-block">Your full name is required.</p>
+  <p ng-show="regForm.pw.$error.minlength && submitted" class="help-block">Password is too short.</p>
+  <p ng-show="regForm.email.$invalid && submitted" class="help-block">False Email-address</p>
+  <p ng-show="regForm.pw2.$invalid && submitted" class="help-block">Passwords aren't equal</p>
+
+  </div>
+  <div class="eButton" ng-click="closeErrorPopup()">OK</div>
+</div> -->

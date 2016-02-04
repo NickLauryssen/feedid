@@ -1,0 +1,182 @@
+@CHARSET "ISO-8859-1";
+
+body{	
+	background: #0992cf;
+	background: -webkit-linear-gradient(to bottom right, #0992cf, #226886);
+	background: -moz-linear-gradient(to bottom right, #0992cf, #226886);
+	background: -ms-linear-gradient(to bottom right, #0992cf, #226886);
+	background: -o-linear-gradient(to bottom right, #0992cf, #226886);
+	background: linear-gradient(to bottom right, #0992cf, #226886);
+	background-attachment: fixed;
+}
+
+h2 {
+	margin-top: 20px;
+    margin-bottom: 20px;
+	width: 600px;
+	text-align: right;
+	font-size: 22pt;
+	font-weight: normal;
+	border-bottom: solid #28444B 2px;
+}
+
+.content form{
+	position: absolute;
+	width: 650px;
+	height: 300px;
+	left: 50%;
+	top: 50%;
+	margin-left: -325px;
+	margin-top: -150px;
+	padding: 0px;
+	border-radius: 4px;
+	color: #28444B;	
+	background-color: white;
+}
+
+#home form {
+	height: 350px;
+	margin-top: -130px;
+}
+
+#register form {
+	height: 500px;
+	margin-top: -205px;
+}
+
+.content table {
+	float: right;
+	margin-right: 50px;
+	text-align: right;
+}
+
+.content td {
+	padding-left: 5px;
+	vertical-align: middle;
+	font-size: 10pt;	
+}
+
+#birthdate, #sex {
+	float: left;
+}
+
+#home h2{
+	padding-top: 50px;
+}
+
+.content .leftalign{
+	text-align: left;
+}
+
+#progressbar{
+	margin-top: 20px;
+	display: inline-block;
+	padding-left: 140px;
+}
+
+#progressbar div{
+	float: left;
+}
+
+#progressbar .line{
+	background: #28444B;
+	height: 10px;
+	width: 80px;
+	margin-top: 35px;
+	margin-left: -10px;
+	margin-right: -10px;
+	padding: 0px 10px;
+}
+
+#progressbar .active{
+	width: 80px;
+	height: 80px;
+	margin: 0px;
+}
+
+#progressbar .inactive{
+	width: 60px;
+	height: 60px;
+	margin: 10px 0px;
+}
+
+#arrow_buttons{
+	position: absolute;
+	right: 50px;
+	bottom: 20px;
+}
+
+#arrow_next{
+	margin: 0px 0px 0px 5px;
+	height: 50px;
+}
+
+#arrow_previous{
+	margin: 5px 0px 5px 5px;
+	height: 40px;
+}
+
+#step1{
+	position: absolute;
+	top: 110px;
+	width: 610px;
+	padding: 0px;
+	text-align: center;
+}
+
+#step2{
+	position: absolute;
+	top: 110px;
+	width: 610px;
+	padding: 0px;
+	text-align: center;
+}
+
+#step3{
+	position: absolute;
+	top: 110px;
+	width: 610px;
+	padding: 0px;
+	text-align: center;
+}
+
+.thumbnail {
+    border: none;
+}
+
+.thumbnail img {
+    max-width: 200px;
+    max-height: 150px;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+.up {
+    margin-right: 10px;
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4;
+    border-radius: 4px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 13px;
+    background: #1D99DE;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.up:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+.datepicker {
+    padding: 0 !important;
+    border-radius: 0 !important;
+}

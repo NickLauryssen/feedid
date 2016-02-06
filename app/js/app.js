@@ -62,10 +62,10 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
 	.when('/admin',
 	{
 		controller: 'AdminCtrl',
-		templateUrl: 'partials/admin.html',
-		resolve: {
+		templateUrl: 'partials/admin.html'
+		/*resolve: {
     			loggedin: checkLoggedin
-    		}
+    		}*/
 	})
 	.when('/register',
 	{
@@ -80,10 +80,10 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
     .when('/user/:userId/:appId',
     {
     		controller: 'PersonCtrl',
-    		templateUrl: 'partials/person.html',
-    		resolve: {
+    		templateUrl: 'partials/person.html'
+    		/*resolve: {
     			loggedin: checkLoggedin
-    		}
+    		}*/
 
     })
     .when('/user/organiser',

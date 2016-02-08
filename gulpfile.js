@@ -11,6 +11,7 @@ let gulp = require('gulp'),
 	notify = require('gulp-notify'),
 	cache = require('gulp-cache'),
 	livereload = require('gulp-livereload'),
+	runSequence = require('run-sequence'),
 	del = require('del');
 
 let DST = 'dist';
@@ -105,8 +106,11 @@ gulp.task('connect', () => {
 });
 
 // Default task
-gulp.task('default', ['watch', 'html', 'partials', 'js', 'css', 'images', 'clean'], () => {
-	gulp.start('connect');
+gulp.task('default', () => {
+	runSequence('clean',
+				['html', 'partials', 'js', 'css', 'images'],
+				'connect',
+				'watch');
 });
 
 // Watch

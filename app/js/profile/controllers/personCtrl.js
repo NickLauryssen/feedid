@@ -1,4 +1,6 @@
-app.controller('PersonCtrl', function($scope, $rootScope, $http, $location, $routeParams) {
+'use strict';
+
+angular.module('feedID.profile').controller('PersonCtrl', function($scope, $rootScope, $http, $location, $routeParams) {
     $scope.client = {};
     $scope.countries = [];
     $scope.userId = $routeParams.userId;

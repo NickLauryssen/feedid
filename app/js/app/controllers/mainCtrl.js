@@ -1,10 +1,6 @@
-var url = "https://feedid.com/backend";
+'use strict';
 
-app.controller('AdminCtrl', function ($rootScope,$scope, $http) {
-  $scope.user = $rootScope.currentUser;
-});
-
-app.controller('MainCtrl', function($scope, $rootScope, $http, $location) {
+angular.module('feedID').controller('MainCtrl', function($scope, $rootScope, $http, $location) {
 	$scope.register = function() {
 		$http.post(url + '/api/users', $scope.user)
 		.success(function(message) {

@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('SearchCtrl', function($scope, $rootScope, $http) {
+angular.module('common.search').controller('SearchCtrl', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {
     $scope.filterUsers = function() {
         $rootScope.searchUsers=[];
         $http.get(url + '/api/users/search/' + $scope.query).success(function(users) {
@@ -12,4 +12,4 @@ app.controller('SearchCtrl', function($scope, $rootScope, $http) {
 	$scope.clear = function() {
 		$scope.query = '';
 	};
-});
+}]);

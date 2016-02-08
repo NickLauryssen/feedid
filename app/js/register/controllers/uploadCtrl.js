@@ -1,4 +1,6 @@
-app.controller('UploadCtrl', ['$scope', '$location', function($scope, $location){
+'use strict';
+
+angular.module('feedID.register').controller('UploadCtrl', ['$scope', '$location', function($scope, $location){
 	//image uploader with ngFlow
     $scope.$on('flow::fileAdded', function (event, $flow, flowFile) {
         var path = $location.path();

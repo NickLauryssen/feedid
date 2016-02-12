@@ -13,6 +13,5 @@
 	return dataFactory;
 }]);*/
 
-var services = angular.module('feedID.services',[]);
+//var services = angular.module('feedID.services',[]);
 //Services
-

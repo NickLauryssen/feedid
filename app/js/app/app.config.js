@@ -1,6 +1,13 @@
 'use strict';
+/**google.setOnLoadCallback(function () {
+    angular.bootstrap(document.body, ['feedID']);
+});
+google.load('visualization', '1', {packages: ['corechart']});
+**/
+var app = angular.module('feedID',['ngResource','ngRoute','ngSanitize',/*'feedID.directives'*/,'googlechart', 'ui.bootstrap']);
 
-angular.module('feedID').config(function($routeProvider, $locationProvider, $httpProvider) {
+//config
+app.config(function($routeProvider, $locationProvider, $httpProvider) {
 
 	var checkLoggedin = function($q, $timeout, $http, $location, $rootScope) {
 		var deferred = $q.defer();
@@ -93,8 +100,9 @@ angular.module('feedID').config(function($routeProvider, $locationProvider, $htt
     	templateUrl:'partials/uploader.php'
     })
 	.otherwise({ redirectTo: '/' });
-})
-.run(function($rootScope, $http, $location) {
+});
+
+app.run(function($rootScope, $http, $location) {
 	var url = "https://feedid.com/backend";
 	$rootScope.message = '';
 	$rootScope.loggedin = false;
@@ -106,19 +114,20 @@ angular.module('feedID').config(function($routeProvider, $locationProvider, $htt
 		$location.url('/');
 	};
 	$rootScope.login = function() {
-        $http.post(url + '/login', {
+        $http({method: "POST", url: url + '/login',data: {
             username: $rootScope.user.username,
             password: $rootScope.user.pass
-        })
-        .success(function(user) {
-            $http.get(url + '/api/apps/Profile').success(function(resultApp) {
+        },withCredentials: 'true'})
+        .then(function(user) {
+            $http({method: "GET",url : url + '/api/apps/Profile', withCredentials: 'true'}).then(function(resultApp) {
                 $rootScope.app = resultApp;
                 $rootScope.message = 'Authentication successful!';
                 $rootScope.user = user;
                 $location.url('/user/' + user._id + '/' + $rootScope.app._id);
-            });
-        })
-        .error(function() {
+            },function(resp){
+							console.log("Something went wrong while getting the profile:" , resp);
+						});
+        },function() {
             $rootScope.message = 'Authentication failed.';
             alert("Authentication failed: Controleer login gegevens.");
             $location.url('/');

@@ -40,12 +40,12 @@
 				<div id="logout" class="item">
 					<img ng-click="logout()" alt="Logout" src="./icons/ic_logout.png">
 				</div>
-				<div class="wrap" id="search" ng-controller="SearchCtrl">
+				<!-- <div class="wrap" id="search" ng-controller="SearchCtrl">
 					<input id="input" placeholder=' ' type='text' ng-change='filterUsers()' ng-model="query" />
 					<ul id='filterlist' ng-show="query">
 						<li ng-repeat='user in searchUsers' ng-click="clear()"><a href='#/user/{{user._id}}/{{app._id}}'>{{user.firstname}} {{user.lastname}}</a></li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 		</div>
         <div ng-view>

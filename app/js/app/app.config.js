@@ -4,10 +4,9 @@
 });
 google.load('visualization', '1', {packages: ['corechart']});
 **/
-var app = angular.module('feedID',['ngResource','ngRoute','ngSanitize',/*'feedID.directives'*/,'googlechart', 'ui.bootstrap']);
 
 //config
-app.config(function($routeProvider, $locationProvider, $httpProvider) {
+angular.module('feedID').config(function($routeProvider, $locationProvider, $httpProvider) {
 
 	var checkLoggedin = function($q, $timeout, $http, $location, $rootScope) {
 		var deferred = $q.defer();
@@ -100,9 +99,8 @@ app.config(function($routeProvider, $locationProvider, $httpProvider) {
     	templateUrl:'partials/uploader.php'
     })
 	.otherwise({ redirectTo: '/' });
-});
-
-app.run(function($rootScope, $http, $location) {
+})
+.run(function($rootScope, $http, $location) {
 	var url = "https://feedid.com/backend";
 	$rootScope.message = '';
 	$rootScope.loggedin = false;

@@ -2,7 +2,8 @@
 
 angular.module('common.filters', []);
 angular.module('common.search', []);
-angular.module('common', ['common.filters', 'common.search']);
+angular.module('common.services', []);
+angular.module('common', ['common.filters', 'common.search', 'common.services']);
 angular.module('feedID.api', []);
 angular.module('feedID.organiser', []);
 angular.module('feedID.profile', ['common']);

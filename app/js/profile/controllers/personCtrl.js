@@ -2,12 +2,13 @@
 
 class PersonCtrl {
 
-    constructor($scope, $rootScope, $http, $location, $routeParams) {
+    constructor($scope, $rootScope, $http, $location, $routeParams, appService) {
         this.$scope = $scope;
         this.$rootScope = $rootScope;
         this.$http = $http;
         this.$location = $location;
         this.$routeParams = $routeParams;
+        this.appService = appService;
 
         this.client = {};
         this.countries = [];
@@ -22,7 +23,7 @@ class PersonCtrl {
     }
 
     init() {
-        if (($rootScope.currentUser._id =='54e83de7b752bfa10e47d8bf') || ($rootScope.currentUser._id =='5502409dd4ac39257ca71f86') || ($rootScope.currentUser._id =='54feefcccf4100975819aeeb')){
+        if ((this.$rootScope.currentUser._id =='54e83de7b752bfa10e47d8bf') || (this.$rootScope.currentUser._id =='5502409dd4ac39257ca71f86') || (this.$rootScope.currentUser._id =='54feefcccf4100975819aeeb')){
             this.canDoAdmin = true;
         }
 
@@ -41,8 +42,10 @@ class PersonCtrl {
         /**
          * This function is responsible for the content of the google charts.
          */
-        this.$http.get(url + '/api/apps/Profile').success((resultApp) => {
-            this.app = resultApp;
+
+        this.appService.getApp('Profile').then(() => {
+            this.app = this.appService.app;
+
             this.$http.get(url + '/api/users/' + this.userId + '/' + this.app._id).success((user) => {
                 this.user = user; //visible User
 
@@ -138,6 +141,11 @@ class PersonCtrl {
                 });
             });
         });
+
+        /*this.$http.get(url + '/api/apps/Profile').success((resultApp) => {
+            this.app = resultApp;
+            });
+        });*/
     }
 
     //register client and add client to database

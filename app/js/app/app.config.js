@@ -1,46 +1,40 @@
 'use strict';
-/**google.setOnLoadCallback(function () {
-    angular.bootstrap(document.body, ['feedID']);
-});
-google.load('visualization', '1', {packages: ['corechart']});
-**/
 
 //config
 angular.module('feedID').config(function($routeProvider, $locationProvider, $httpProvider) {
 
-	var checkLoggedin = function($q, $timeout, $http, $location, $rootScope) {
+	let checkLoggedin = ($q, $timeout, $http, $location, $rootScope) => {
 		var deferred = $q.defer();
 
-		$http.get(url + '/loggedin').success(function(user) {
-			if(user !== '0'){
+		$http.get(url + '/loggedin').success((user) => {
+			if (user !== '0'){
 				$rootScope.loggedin = true;
 				$rootScope.currentUser = user;
 				$timeout(deferred.resolve, 0);
-			}
-			else {
+			} else {
 				$rootScope.loggedin = false;
 				$timeout(function(){deferred.reject();}, 0);
 				$location.url('/');
 			}
-
 		});
 
 		return deferred.promise;
 	};
 
 	$httpProvider.interceptors.push(function($q, $location) {
-		return function(promise) {
+		return (promise) => {
 			return promise.then(
-				function(response) {
+				(response) => {
 					return response;
 				},
-				function(response) {
+				(response) => {
                     if (response.status === 401)
 						$location.url('/login');
+
 					return $q.reject(response);
 				}
 			);
-		}
+		};
 	});
 
  	$routeProvider.when('/',
@@ -101,34 +95,40 @@ angular.module('feedID').config(function($routeProvider, $locationProvider, $htt
 	.otherwise({ redirectTo: '/' });
 })
 .run(function($rootScope, $http, $location) {
-	var url = "https://feedid.com/backend";
+	const url = "https://feedid.com/backend";
 	$rootScope.message = '';
 	$rootScope.loggedin = false;
 
-	$rootScope.logout = function() {
+	$rootScope.logout = () => {
 		$rootScope.message = 'Logged out.';
 		$http.post(url + '/logout');
 		$rootScope.loggedin = false;
 		$location.url('/');
 	};
-	$rootScope.login = function() {
+
+	$rootScope.login = () => {
         $http({method: "POST", url: url + '/login',data: {
             username: $rootScope.user.username,
             password: $rootScope.user.pass
         },withCredentials: 'true'})
-        .then(function(user) {
-            $http({method: "GET",url : url + '/api/apps/Profile', withCredentials: 'true'}).then(function(resultApp) {
-                $rootScope.app = resultApp;
+        .then((result) => {
+			$rootScope.user = result.data;
+
+            $http({method: "GET",url : url + '/api/apps/Profile', withCredentials: 'true'}).then((result) => {
+                $rootScope.app = result.data;
                 $rootScope.message = 'Authentication successful!';
-                $rootScope.user = user;
-                $location.url('/user/' + user._id + '/' + $rootScope.app._id);
-            },function(resp){
-							console.log("Something went wrong while getting the profile:" , resp);
-						});
-        },function() {
+                $location.url('/user/' + $rootScope.user._id + '/' + $rootScope.app._id);
+            },function(err){
+				console.log("Something went wrong while getting the profile:" , err);
+			});
+        },() => {
             $rootScope.message = 'Authentication failed.';
             alert("Authentication failed: Controleer login gegevens.");
+
             $location.url('/');
         });
     };
+})
+.constant('config', {
+	api: 'https://feedid.com/backend'
 });

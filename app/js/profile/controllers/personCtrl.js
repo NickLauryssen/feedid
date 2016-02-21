@@ -2,13 +2,14 @@
 
 class PersonCtrl {
 
-    constructor($scope, $rootScope, $http, $location, $routeParams, appService) {
+    constructor($scope, $rootScope, $http, $location, $routeParams, appService, userService) {
         this.$scope = $scope;
         this.$rootScope = $rootScope;
         this.$http = $http;
         this.$location = $location;
         this.$routeParams = $routeParams;
         this.appService = appService;
+        this.userService = userService;
 
         this.client = {};
         this.countries = [];
@@ -31,12 +32,6 @@ class PersonCtrl {
         this.$http.get(url + '/api/countries').success((countries) => {
             for (var c in countries)
                 this.countries.push(countries[c]);
-
-        });
-
-        //get App
-        this.$http.get(url + '/api/apps/Profile').success((resultApp) => {
-            this.app = resultApp;
         });
 
         /**
@@ -46,14 +41,13 @@ class PersonCtrl {
         this.appService.getApp('Profile').then(() => {
             this.app = this.appService.app;
 
-            this.$http.get(url + '/api/users/' + this.userId + '/' + this.app._id).success((user) => {
-                this.user = user; //visible User
+            this.userService.getUser(this.userId, this.app._id).then(() => {
+                this.user = this.userService.user;
 
                 if (!this.user.validated) {
                     var owner_id = this.$rootScope.currentUser._id;
                     var user_id = this.user._id;
                     //get app to make sure it is set (I made another get app request here because sometimes this userapps request was sent before app was set)
-
 
                     this.$http.get(url + '/api/userapps/' + owner_id + '/' + user_id + '/' + this.app._id)
                         .success((userapp) => {
@@ -141,42 +135,22 @@ class PersonCtrl {
                 });
             });
         });
-
-        /*this.$http.get(url + '/api/apps/Profile').success((resultApp) => {
-            this.app = resultApp;
-            });
-        });*/
     }
 
     //register client and add client to database
     register() {
-        this.$http.post(url + '/api/users', this.client).success((user) => {
-	        var userApp = {
-                owner: this.$rootScope.currentUser._id,
-                linkuser: user._id,
-                app: this.app._id
-            };
+        this.userService.addUser(this.client).then(
+            () => {
+    		    this.userapp = {
+                    owner: this.$rootScope.currentUser._id,
+                    linkuser: this.userService.user._id,
+                    app: this.app._id
+                };
 
-		    this.userapp = userApp;
-
-	        this.$http.post(url+'/api/userapps',this.userapp);
-
-                /*$http.post(url + '/api/register', $scope.client)
-                    .success(function(message) {
-
-                      $rootScope.message = 'User registered and mail is sent to your email.';
-                        $location.url('/login');
-                    })
-                    .error(function() {
-                        $rootScope.message = 'Couldn\'t register user';
-                    });*/
-                this.$rootScope.message = "User registered!";
+    	        this.$http.post(url+'/api/userapps',this.userapp);
                 this.client = {};
-                alert($rootScope.message);
-        }).error(() => {
-                this.$rootScope.message = 'Couldn\'t register user';
-                alert($rootScope.message);
-        });
+            }
+        );
     }
 
     /**
@@ -194,12 +168,14 @@ class PersonCtrl {
 
     save() {
         this.user = this.editUser;
-        this.$http.put(url + '/api/users/' + this.editUser._id, this.editUser).success((usr) => {
-            this.$rootScope.message = "User updated successfully!";
-            if (this.$rootScope.currentUser._id == usr._id)
-                this.$rootScope.currentUser = usr;
-             alert(this.$rootScope.message);
-        });
+        this.userService.updateUser(this.editUser).then(
+            () => {
+                if (this.$rootScope.currentUser._id === this.userService.user._id) {
+                    this.$rootScope.currentUser = this.userService.user;
+                }
+            }
+        );
+
         this.disableEditor();
     }
 

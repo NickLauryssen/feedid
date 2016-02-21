@@ -2,7 +2,7 @@
 
 class PersonCtrl {
 
-    constructor($scope, $rootScope, $http, $location, $routeParams, appService, userService) {
+    constructor($scope, $rootScope, $http, $location, $routeParams, appService, userService, countryService) {
         this.$scope = $scope;
         this.$rootScope = $rootScope;
         this.$http = $http;
@@ -10,6 +10,7 @@ class PersonCtrl {
         this.$routeParams = $routeParams;
         this.appService = appService;
         this.userService = userService;
+        this.countryService = countryService;
 
         this.client = {};
         this.countries = [];
@@ -21,6 +22,8 @@ class PersonCtrl {
         this.releaseBtn = false;
         this.editBtn = false;
         this.canDoAdmin = false;
+
+        this.init();
     }
 
     init() {
@@ -28,10 +31,8 @@ class PersonCtrl {
             this.canDoAdmin = true;
         }
 
-        //get countries
-        this.$http.get(url + '/api/countries').success((countries) => {
-            for (var c in countries)
-                this.countries.push(countries[c]);
+        this.countryService.getCountries().then(() => {
+            this.countries = this.countryService.countries;
         });
 
         /**

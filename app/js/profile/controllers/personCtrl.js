@@ -2,7 +2,7 @@
 
 class PersonCtrl {
 
-    constructor($scope, $rootScope, $http, $location, $routeParams, appService, userService, countryService) {
+    constructor($scope, $rootScope, $http, $location, $routeParams, appService, userService, countryService, authService) {
         this.$scope = $scope;
         this.$rootScope = $rootScope;
         this.$http = $http;
@@ -11,6 +11,7 @@ class PersonCtrl {
         this.appService = appService;
         this.userService = userService;
         this.countryService = countryService;
+        this.authService = authService;
 
         this.client = {};
         this.countries = [];
@@ -38,7 +39,6 @@ class PersonCtrl {
         /**
          * This function is responsible for the content of the google charts.
          */
-
         this.appService.getApp('Profile').then(() => {
             this.app = this.appService.app;
 
@@ -46,8 +46,8 @@ class PersonCtrl {
                 this.user = this.userService.user;
 
                 if (!this.user.validated) {
-                    var owner_id = this.$rootScope.currentUser._id;
-                    var user_id = this.user._id;
+                    let owner_id = this.$rootScope.currentUser._id;
+                    let user_id = this.user._id;
                     //get app to make sure it is set (I made another get app request here because sometimes this userapps request was sent before app was set)
 
                     this.$http.get(url + '/api/userapps/' + owner_id + '/' + user_id + '/' + this.app._id)
@@ -68,22 +68,20 @@ class PersonCtrl {
                  * The testresults are unique for a specific user.
                  */
                 this.$http.get(url + '/api/tests/'+ this.user._id).success((tests) => {
-                    for (var i in tests) {
-                        this.tests.push(tests[i]);
-                    }
+                    this.tests = tests;
                     this.selectedTest = tests[0];
 
                     /**
                      * Get all testresults from a specific user.
                      */
                     this.$http.get(url + '/api/testresults/' + this.user._id).success((testResults) => {
-
-                        for (var i in testResults)
-                            if (testResults[i]== null){
+                        for (let result of testResults) {
+                            if (result === null){
                              this.tests = [];
                             } else{
                                 this.testResults = testResults;
                             }
+                        }
 
                         /**
                          * For each test we make a new chart and store them in a charts array.(array == store of all test charts)
@@ -92,19 +90,26 @@ class PersonCtrl {
                          * The rows[] array will represent the Y-axis data.
                          */
 
-                        for (var k in this.tests) {
-                            var testId = this.tests[k]._id;
-                            var aChart = {};
+                        for (let test of this.tests) {
+                            let testId = test._id;
+                            let aChart = {};
                             aChart.type = "LineChart";
                             aChart.displayed = "true";
                             aChart.data = {};
-                            var cols = [];
-                            var rows = [];
-                            cols.push({"id": "time", "label": "Time", "type": "string", "p": {}});
-                            for (var sub in this.tests[k].subTests) {
+                            let cols = [];
+                            let rows = [];
+
+                            cols.push({
+                                "id": "time",
+                                "label": "Time",
+                                "type": "string",
+                                "p": {}
+                            });
+
+                            for (let subTest of test.subTests) {
                                 cols.push({
-                                    "id": this.tests[k].subTests[sub].name,
-                                    "label": this.tests[k].subTests[sub].name,
+                                    "id": subTest.name,
+                                    "label": subTest.name,
                                     "type": "number",
                                     "p": {}
                                 });
@@ -114,23 +119,22 @@ class PersonCtrl {
                              * For each testresult of a user.
                              */
 
-                            for (var res in this.testResults) {
-                                if (this.testResults[res].test == testId) {
-                                    var o = {};
-                                    var valArray = [];
-                                    valArray.push({"v": this.testResults[res].time});
+                            for (let result of this.testResults) {
+                                if(result.test === testId) {
+                                    let obj = {};
 
-                                    for (var r in this.testResults[res].subResults) {
-                                        valArray.push({"v": this.testResults[res].subResults[r]});
+                                    obj.c.push({ 'v': result.time });
+
+                                    for (let subResult of result.subResults) {
+                                        obj.c.push({ 'v': subResult});
                                     }
-                                    o.c = valArray;
-                                    rows.push(o);
+
+                                    rows.push(obj);
                                 }
                             }
+
                             aChart.data.rows = rows;
-                            //$scope.charts.push(aChart);
-                            if (rows.length < 1) aChart = null;
-                            this.tests[k].chart = aChart;
+                            test.chart = rows.length < 1 ? aChart : null;
                         }
                     });
                 });
@@ -142,13 +146,6 @@ class PersonCtrl {
     register() {
         this.userService.addUser(this.client).then(
             () => {
-    		    this.userapp = {
-                    owner: this.$rootScope.currentUser._id,
-                    linkuser: this.userService.user._id,
-                    app: this.app._id
-                };
-
-    	        this.$http.post(url+'/api/userapps',this.userapp);
                 this.client = {};
             }
         );
@@ -181,13 +178,7 @@ class PersonCtrl {
     }
 
     sendConfirmEmail() {
-         this.$http.post(url + '/register', this.user)
-            .success((message) => {
-                alert('User registered and mail is sent to your email.');
-            })
-            .error(() => {
-                this.$rootScope.message = 'Couldn\'t register user';
-            });
+        this.authService.register(this.user);
     }
 }
 

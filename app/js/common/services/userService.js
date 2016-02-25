@@ -2,9 +2,11 @@
 
 class UserService {
 
-	constructor($http, config) {
+	constructor($http, $rootScope, config, appService) {
 		this.$http = $http;
+		this.$rootScope = $rootScope;
 		this.config = config;
+		this.appService = appService;
 		this.user = {};
 	}
 
@@ -34,6 +36,14 @@ class UserService {
 		return this.$http.post(this.config.api + '/api/users', user).then(
 			(result) => {
 				this.user = result.data;
+
+				let userapp = {
+                    owner: this.$rootScope.currentUser._id,
+                    linkuser: this.user._id,
+                    app: this.appService.app._id
+                };
+
+    	        this.$http.post(this.config.api + '/api/userapps', this.userapp);
 			},
 			(error) => {
 				console.log('Couldn\'t add user');

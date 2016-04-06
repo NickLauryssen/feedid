@@ -107,24 +107,24 @@ angular.module('feedID').config(function($routeProvider, $locationProvider, $htt
 	};
 
 	$rootScope.login = () => {
-        $http({method: "POST", url: url + '/login',data: {
+      $http({method: "POST", url: url + '/login',data: {
             username: $rootScope.user.username,
             password: $rootScope.user.pass
-        },withCredentials: 'true'})
+        }})
         .then((result) => {
-			$rootScope.user = result.data;
-
-            $http({method: "GET",url : url + '/api/apps/Profile', withCredentials: 'true'}).then((result) => {
+			$rootScope.currentUser = result.data;
+			$rootScope.user = $rootScope.currentUser;
+			$rootScope.loggedin = true;
+            $http({method: "GET",url : url + '/api/apps/Profile'}).then((result) => {
                 $rootScope.app = result.data;
                 $rootScope.message = 'Authentication successful!';
-                $location.url('/user/' + $rootScope.user._id + '/' + $rootScope.app._id);
+                $location.url('/user/' + $rootScope.currentUser._id + '/' + $rootScope.app._id);
             },function(err){
 				console.log("Something went wrong while getting the profile:" , err);
 			});
         },() => {
             $rootScope.message = 'Authentication failed.';
             alert("Authentication failed: Controleer login gegevens.");
-
             $location.url('/');
         });
     };

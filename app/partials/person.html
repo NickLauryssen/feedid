@@ -55,11 +55,11 @@
 		<div id="tabs">
 			<ul>
 				<li>
-					<p class="active tab" id="overview">Overzicht</p>
+					<p class="active tab" ng-click="showOverview(); " id="overview">Overzicht</p>
 				</li>
-                <li>
-                    <p class="inactive tab" id="administrator" ng-click="test()" ng-show="canDoAdmin">Administrator</p>
-                </li>
+        <li>
+            <p class="inactive tab" id="administrator" ng-click="showAdminPanel(); " ng-show="canDoAdmin">Administrator</p>
+        </li>
 			</ul>
 		</div>
 		<div id="ruler"></div>
@@ -164,8 +164,8 @@
 			<!--<p>${vieweduser.dateofbirth}</p>-->
 		</div>
 		<div id="content-page">
-            <div class="overview tabcontent">
-                <div ng-show="tests">
+            <div class="overview tabcontent" ng-show="inOverview">
+                <div>
                     <h3>Test</h3>
                     <select ng-model="selectedTest" ng-options="t.name for t in tests | orderBy:name" class="length4" ></select><br />
                     <h3>{{selectedTest.name}}</h3>
@@ -186,7 +186,7 @@
                     <div class="hr" ng-if="$last"></div>
                 </div> -->
             </div>
-            <div class="administrator tabcontent">
+            <div class="administrator tabcontent" ng-show="inAdminPanel">
                 <h2 class="">Klant toevoegen</h2>
                 <form id="regForm" name="regForm" ng-submit="register()" novalidate>
                     <div class="control-group">

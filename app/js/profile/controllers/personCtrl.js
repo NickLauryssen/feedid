@@ -15,22 +15,38 @@ class PersonCtrl {
 
         this.client = {};
         this.countries = [];
-        this.userId = $routeParams.userId;
+      //  console.log("ROUTEPARAMS", $routeParams);
+        this.userId = $rootScope.user._id;
         this.tests = [];
         this.testResults = [];
         this.app = {};
         this.$rootScope.editorEnabled = false;
         this.releaseBtn = false;
         this.editBtn = false;
-        this.canDoAdmin = false;
-
+        if ((this.$rootScope.currentUser._id =='54e83de7b752bfa10e47d8bf') || (this.$rootScope.currentUser._id =='5502409dd4ac39257ca71f86') || (this.$rootScope.currentUser._id =='54feefcccf4100975819aeeb')){
+            this.canDoAdmin = true;
+            console.log("YOU ARE AN ADMIN!")
+        }else {
+          this.canDoAdmin = false;
+        }
         this.init();
+        this.$scope.inOverview = true;
+
+        this.$scope.showOverview = function() {
+          $scope.inAdminPanel = false;
+          $scope.inOverview = true;
+        }
+
+        this.$scope.showAdminPanel= function() {
+          $scope.inOverview = false;
+          $scope.inAdminPanel = true;
+        }
+
+
     }
 
     init() {
-        if ((this.$rootScope.currentUser._id =='54e83de7b752bfa10e47d8bf') || (this.$rootScope.currentUser._id =='5502409dd4ac39257ca71f86') || (this.$rootScope.currentUser._id =='54feefcccf4100975819aeeb')){
-            this.canDoAdmin = true;
-        }
+
 
         this.countryService.getCountries().then(() => {
             this.countries = this.countryService.countries;
@@ -41,18 +57,19 @@ class PersonCtrl {
          */
         this.appService.getApp('Profile').then(() => {
             this.app = this.appService.app;
-
             this.userService.getUser(this.userId, this.app._id).then(() => {
-                this.user = this.userService.user;
+            this.user = this.userService.user;
 
                 if (!this.user.validated) {
                     let owner_id = this.$rootScope.currentUser._id;
                     let user_id = this.user._id;
                     //get app to make sure it is set (I made another get app request here because sometimes this userapps request was sent before app was set)
 
-                    this.$http.get(url + '/api/userapps/' + owner_id + '/' + user_id + '/' + this.app._id)
+                    this.$http({method:"GET", url: this.appService.config.api + '/api/userapps/' + owner_id + '/' + user_id + '/' + this.app._id})
                         .success((userapp) => {
+
                             if (userapp._id) {
+                                this.$scope.inOverview = true;
                                 this.releaseBtn = true;
                                 this.editBtn = true;
                             }
@@ -67,14 +84,14 @@ class PersonCtrl {
                  * These charts are filled with testresults for this test.
                  * The testresults are unique for a specific user.
                  */
-                this.$http.get(url + '/api/tests/'+ this.user._id).success((tests) => {
+                this.$http.get(this.appService.config.api + '/api/tests/'+ this.user._id).success((tests) => {
                     this.tests = tests;
                     this.selectedTest = tests[0];
 
                     /**
                      * Get all testresults from a specific user.
                      */
-                    this.$http.get(url + '/api/testresults/' + this.user._id).success((testResults) => {
+                    this.$http({method:"GET", url:this.appService.config.api + '/api/testresults/' + this.user._id, params:{_id:this.$rootScope.currentUser._id}}).success((testResults) => {
                         for (let result of testResults) {
                             if (result === null){
                              this.tests = [];
@@ -180,6 +197,8 @@ class PersonCtrl {
     sendConfirmEmail() {
         this.authService.register(this.user);
     }
+
+
 }
 
 angular.module('feedID.profile').controller('PersonCtrl', PersonCtrl);

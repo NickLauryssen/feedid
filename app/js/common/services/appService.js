@@ -9,7 +9,7 @@ class AppService {
 	}
 
 	getApp(id) {
-		return this.$http(config.api + '/api/apps/' + id).then(
+		return this.$http({method: 'GET',url:this.config.api + '/api/apps/' + id}).then(
 			(result) => {
 				this.app = result.data;
 			},

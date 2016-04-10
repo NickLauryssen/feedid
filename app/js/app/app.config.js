@@ -73,6 +73,7 @@ angular.module('feedID').config(function($routeProvider, $locationProvider, $htt
     .when('/user/:userId/:appId',
     {
     		controller: 'PersonCtrl',
+			controllerAs: 'vm',
     		templateUrl: 'partials/person.html'
     		/*resolve: {
     			loggedin: checkLoggedin

@@ -15,59 +15,23 @@
     });
 </script>
 <div id="profile">
-	<!-- <div id="submenu">
-		<div class="large-item">
-		<a href="./createNotification?connid=${vieweduser.id}">
-			<img alt="Connectie aanvragen"
-				src="./icons/ic_connection_make.png">
-			<p>Connectie aanvragen</p>
-		</a>
-		</div>
-		<div class="large-item">
-			<img alt="Connectie verbreken"
-				src="./icons/ic_connection_break.png">
-			<p>Connectie verbreken</p>
-		</div>
-		<div class="separator"></div>
-		<div class="large-item">
-			<img alt="Connectie verbreken"
-				src="./icons/ic_communication.png">
-			<p>Bericht versturen</p>
-		</div>
-		<div class="separator"></div>
-		<div class="large-item">
-			<img alt="Connectie verbreken"
-				src="./icons/ic_map.png">
-			<p>Op kaart tonen</p>
-		</div>
-		<div class="large-item">
-			<img alt="Connectie verbreken"
-				src="./icons/ic_export.png">
-			<p>Profiel exporteren</p>
-		</div>
-		<div class="large-item">
-			<img alt="Connectie verbreken" src="./icons/ic_print.png">
-			<p>Profiel afdrukken</p>
-		</div>
-		<div class="separator"></div>
-	</div> -->
 	<div id="content">
 		<div id="tabs">
 			<ul>
 				<li>
-					<p class="active tab" ng-click="showOverview(); " id="overview">Overzicht</p>
+					<p class="active tab" id="overview">Overzicht</p>
 				</li>
-        <li>
-            <p class="inactive tab" id="administrator" ng-click="showAdminPanel(); " ng-show="canDoAdmin">Administrator</p>
-        </li>
+                <li>
+                    <p class="inactive tab" id="administrator" ng-show="vm.canDoAdmin">Administrator</p>
+                </li>
 			</ul>
 		</div>
 		<div id="ruler"></div>
 		<div id="sidemenu">
-            <div ng-hide="editorEnabled">
+            <div ng-hide="vm.editorEnabled">
                 <img class="profilepicture" alt="profile picture" src="https://feedid.com/backend/images/{{user.picture}}" />
                 <h1>{{user.firstname}}&nbsp;{{user.lastname}}</h1>
-                <p class="link" ng-click="enableEditor()" ng-show="editBtn">Profiel bewerken</p>
+                <p class="link" ng-click="vm.enableEditor()" ng-show="vm.editBtn">Profiel bewerken</p>
                 <div class="hr"></div>
                 <h2>Informatie</h2>
                 <p>Geslacht: {{user.sex}}</p>
@@ -84,9 +48,9 @@
                 <p>{{user.email}}</p>
                 <h2>Gsm-nummer</h2>
                 <p>{{user.mobile}}</p>
-                <button ng-show="releaseBtn" ng-click="sendConfirmEmail()">Stuur bevestigingsmail</button>
+                <button ng-show="vm.releaseBtn" ng-click="vm.sendConfirmEmail()">Stuur bevestigingsmail</button>
             </div>
-            <div id="editor" ng-show="editorEnabled" flow-init="{target:'https://feedid.com/backend/images/upload', singleFile:true, testChunks:false}">
+            <div id="editor" ng-show="vm.editorEnabled" flow-init="{target:'https://feedid.com/backend/images/upload', singleFile:true, testChunks:false}">
                 <div ng-controller="UploadCtrl">
                     <div class="thumbnail" ng-show="!$flow.files.length">
                         <img class="profilepicture" src="https://feedid.com/backend/images/{{editUser.picture}}" />
@@ -159,82 +123,7 @@
                     </tr>
                 </table>
             </div>
-			<!--<div class="hr"></div>-->
-			<!--<h2>Geboortedatum</h2>-->
-			<!--<p>${vieweduser.dateofbirth}</p>-->
 		</div>
-		<div id="content-page">
-            <div class="overview tabcontent" ng-show="inOverview">
-                <div>
-                    <h3>Test</h3>
-                    <select ng-model="selectedTest" ng-options="t.name for t in tests | orderBy:name" class="length4" ></select><br />
-                    <h3>{{selectedTest.name}}</h3>
-                    <div ng-if="selectedTest.chart==null">
-                        Geen data beschikbaar
-                    </div>
-                    <div ng-if="selectedTest.chart!=null" google-chart chart="selectedTest.chart" style="{{cssStyle}}" class="ng-scope ng-isolate-scope"></div>
-                </div>
-
-                <!-- <div ng-repeat="testResult in testResults | filter: {test: selectedTest._id}" id="testResult-{{testResult._id}} track by $index">
-
-                    <p>Time: {{testResult.time}}</p>
-                    <p>Results:</p>
-                    <p ng-repeat="(tIndex, subResult) in testResult.subResults track by $index">
-                        {{selectedTest.subTests[tIndex].name}} : {{subResult}} {{selectedTest.subTests[tIndex].resultUnit}}
-                    </p>
-
-                    <div class="hr" ng-if="$last"></div>
-                </div> -->
-            </div>
-            <div class="administrator tabcontent" ng-show="inAdminPanel">
-                <h2 class="">Klant toevoegen</h2>
-                <form id="regForm" name="regForm" ng-submit="register()" novalidate>
-                    <div class="control-group">
-                        <label class="control-label">Voornaam</label>
-                        <input type="text" name="firstname" id="firstname" placeholder="Voornaam" ng-model="client.firstname" />
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Achternaam</label>
-                        <input type="text" name="lastname" id="lastname" placeholder="Achternaam" ng-model="client.lastname" />
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Geslacht</label>
-                        <select ng-model="client.sex" ng-options="sex for sex in ['Man','Vrouw']" ></select>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Geboortedatum</label>
-                        <input type="text" ng-model="client.dateofbirth" class="datepicker"  />
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">E-mailadres</label>
-                        <input  type="email" name="email" id="email" placeholder="E-mailadres" ng-model="client.email" required/><br />
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Straat + huisnummer</label>
-                        <input type="text" placeholder="Straat" ng-model="client.street"  />
-                        <input type="text" placeholder="Huisnr." ng-model="client.number"  />
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Postcode</label></td>
-                        <input type="text" placeholder="Postcode" ng-model="client.postal_code" />
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Woonplaats</label></td>
-                        <input type="text" placeholder="Woonplaats" ng-model="client.city"  />
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Land</label>
-                        <select ng-model="client.country" ng-options="c.country as c.country for c in countries | orderBy:country_code" ></select>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Mobiel</label>
-                        <input type="text" placeholder="Mobiel" ng-model="client.mobile"  />
-                    </div>
-                    <div class="control-group">
-                        <button id="btn_register" type="submit" ng-click="infoTextF={color:'red'}" class="btn btn-primary">Maak klantenprofiel aan</button>
-                    </div>
-                </form>
-            </div>
-		</div>
+		<div id="content-page" fi-panel></div>
 	</div>
 </div>

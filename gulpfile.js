@@ -17,7 +17,7 @@ let gulp = require('gulp'),
 let DST = 'dist';
 
 let path = {
-	'html': 'app/*.html',
+	'html': 'app/**/*.html',
 	'partials': 'app/partials/**/*.html',
 	'css': 'app/css/**/*.css',
 	'scripts': 'app/js/**/*.js',
@@ -118,7 +118,7 @@ gulp.task('watch', () => {
 	// Watch html filters
 	gulp.watch(path.html, ['html']);
 	// Watch .js files
-	gulp.watch(path.scripts, ['scripts']);
+	gulp.watch(path.scripts, ['js']);
 	// Watch image files
 	gulp.watch(path.images, ['images']);
 	// Watch css files

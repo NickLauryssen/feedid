@@ -4,7 +4,7 @@ $(document).ready(function(e) {
     $('.overview').show();
 
 	// NAVIGATE TABS
-	$(".tab").off('click').click(function(e) {
+	/*$(".tab").off('click').click(function(e) {
 		var elements = document.getElementsByClassName('active');
 
 		$(elements[0]).addClass('inactive');
@@ -16,7 +16,7 @@ $(document).ready(function(e) {
         //set current tabcontent visible
         $('.tabcontent').hide();
         $('.' + e.target.id).show();
-	});
+	});*/
 });
 $( "#btn_register" ).click(function() {
     document.getElementById("regForm").reset();

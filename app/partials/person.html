@@ -16,16 +16,7 @@
 </script>
 <div id="profile">
 	<div id="content">
-		<div id="tabs">
-			<ul>
-				<li>
-					<p class="active tab" id="overview">Overzicht</p>
-				</li>
-                <li>
-                    <p class="inactive tab" id="administrator" ng-show="vm.canDoAdmin">Administrator</p>
-                </li>
-			</ul>
-		</div>
+		<div id="tabs" fi-tab show-admin="vm.canDoAdmin"></div>
 		<div id="ruler"></div>
 		<div id="sidemenu">
             <div ng-hide="vm.editorEnabled">

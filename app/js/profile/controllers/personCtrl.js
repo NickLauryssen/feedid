@@ -2,17 +2,17 @@
 
 class PersonCtrl {
 
-    constructor($rootScope, $routeParams, appService, userService, countryService, authService) {
+    constructor($rootScope, $routeParams, appService, userService, countryService, authService, testService) {
         this.$rootScope = $rootScope;
         this.$routeParams = $routeParams;
         this.appService = appService;
         this.countryService = countryService;
         this.authService = authService;
-
+        this.testService = testService;
 
         this.countries = [];
 
-        this.userId = this.$rootScope.user._id;
+        this.user = this.$rootScope.user;
         this.tests = [];
         this.testResults = [];
         this.app = {};
@@ -24,7 +24,7 @@ class PersonCtrl {
         if ((this.$rootScope.currentUser._id =='54e83de7b752bfa10e47d8bf') || (this.$rootScope.currentUser._id =='5502409dd4ac39257ca71f86') || (this.$rootScope.currentUser._id =='54feefcccf4100975819aeeb')){
             this.canDoAdmin = true;
         }else {
-          this.canDoAdmin = false;
+            this.canDoAdmin = false;
         }
 
         this.init();
@@ -34,6 +34,32 @@ class PersonCtrl {
         this.countryService.getCountries().then(() => {
             this.countries = this.countryService.countries;
         });
+
+        /**
+         * These charts are filled with testresults for this test.
+         * The testresults are unique for a specific user.
+         */
+         this.testService.getTests(this.user._id).then(
+             (tests) => {
+                this.tests = tests;
+                this.selectedTest = tests[0];
+
+                 /**
+                  * Get all testresults from a specific user.
+                  */
+                this.testService.getResults(this.user._id, {'_id': this.$rootScope.currentUser._id}).then(
+                    (testResults) => {
+                        for (let result of _.compact(testResults)) {
+                            if (result === null){
+                                this.tests = [];
+                            } else{
+                                this.testResults = testResults;
+                            }
+                        }
+                    }
+                );
+            }
+        );
     }
 
     /**

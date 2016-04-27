@@ -10,6 +10,10 @@ class UserService {
 		this.user = {};
 	}
 
+	currentUser() {
+		return this.user;
+	}
+
 	getUser(userId, appId) {
 		return this.$http({url:this.config.api + '/api/users/' + userId + '/' + appId,method:"GET", params:{_id:this.$rootScope.currentUser._id}}).then(
 			(result) => {

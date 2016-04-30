@@ -11,4 +11,4 @@ angular.module('feedID.organiser', []);
 angular.module('feedID.profile', ['common']);
 angular.module('feedID.register', []);
 angular.module('feedID.login', []);
-angular.module('feedID',['ngResource','ngRoute','ngSanitize','googlechart', 'ui.bootstrap', 'feedID.login', 'feedID.register', 'feedID.profile', 'feedID.organiser']);
+angular.module('feedID',['ngResource','ngRoute','ngSanitize','googlechart', 'ui.bootstrap', 'ui.router', 'feedID.login', 'feedID.register', 'feedID.profile', 'feedID.organiser']);

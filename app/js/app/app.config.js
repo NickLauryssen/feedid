@@ -9,11 +9,11 @@
 		.run(run)
 		.constant('config', {
 			api: 'https://feedid.com/backend'
-		});;
+		});
 
 	function config($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
-		let checkLoggedin = ($q, $timeout, $http, $location, $rootScope) => {
+		let checkLoggedin = ($q, $timeout, $http, $injector, $rootScope) => {
 			var deferred = $q.defer();
 
 			$http.get(url + '/loggedin').success((user) => {
@@ -23,32 +23,34 @@
 					$timeout(deferred.resolve, 0);
 				} else {
 					$rootScope.loggedin = false;
-					$timeout(function(){deferred.reject();}, 0);
-					$location.url('/');
+
+					$timeout(function(){
+						deferred.reject();
+					}, 0);
+
+					$injector.get('$state').go('app');
 				}
 			});
 
 			return deferred.promise;
 		};
 
-		$httpProvider.interceptors.push(function($q, $location) {
+		$httpProvider.interceptors.push(function($q, $injector) {
 			return (promise) => {
 				return promise.then(
 					(response) => {
 						return response;
 					},
 					(response) => {
-	                    if (response.status === 401)
-							$location.url('/login');
+	                    if (response.status === 401) {
+							$injector.get('$state').go('login');
+						}
 
 						return $q.reject(response);
 					}
 				);
 			};
 		});
-
-		// Default redirect
-		$urlRouterProvider.otherwise('/');
 
 	 	$stateProvider.state('app',
 		{
@@ -62,12 +64,6 @@
 	        controller: 'PasswordCtrl',
 	        templateUrl: 'partials/new.html'
 	    })
-		.state('app.login',
-		{
-			'url': '/login',
-			controller: 'LoginCtrl',
-			templateUrl: 'partials/login.html'
-		})
 		.state('app.admin',
 		{
 			'url': '/admin',
@@ -76,51 +72,13 @@
 			/*resolve: {
 	    			loggedin: checkLoggedin
 	    		}*/
-		})
-		.state('app.registration',
-		{
-			'url': '/register',
-			controller: 'RegisterCtrl',
-			templateUrl: 'partials/register.html'
-		})
-	    .state('app.registration.confirm',
-	    {
-			'url': '/confirm/:activationId',
-	        controller: 'ConfirmCtrl',
-	        templateUrl: 'partials/confirm.html'
-	    })
-	    .state('app.organiser',
-	    {
-			'url': '/user/organiser',
-	        controller: 'OrganiserCtrl',
-	        templateUrl: 'partials/organiser.html'
-	    })
-	    .state('app.registration.photoupload',
-	    {
-			'url': '/photoupload',
-	    	controller: 'UploadCtrl',
-	    	templateUrl: 'partials/photoupload.html'
-	    })
-	    .state('app.registration.uploader',
-		{
-			'url': '/uploader',
-	    	templateUrl: 'partials/uploader.php'
-	    })
-		.state('profile', {
-			'url': '/user/:userId/:appId',
-			'templateUrl': 'partials/person.html',
-			'controller': 'PersonCtrl',
-			'controllerAs': 'vm'
-		})
-		.state('profile.overview', {
-			'templateUrl': 'partials/overview.html'
-		})
-		.state('profile.admin', {
-			'templateUrl': 'partials/administrator.html'
-		});;
+		});
+
+		// Default redirect
+		$urlRouterProvider.otherwise('/');
 	}
 
-	function run($rootScope, $http, $location) {
+	function run($rootScope, $http, $location, $state) {
 		const url = "https://feedid.com/backend";
 		$rootScope.message = '';
 		$rootScope.loggedin = false;
@@ -144,7 +102,8 @@
 	            $http({method: "GET",url : url + '/api/apps/Profile'}).then((result) => {
 	                $rootScope.app = result.data;
 	                $rootScope.message = 'Authentication successful!';
-	                $location.url('/user/' + $rootScope.currentUser._id + '/' + $rootScope.app._id);
+					$state.go('profile', { 'userId': $rootScope.currentUser._id, 'appId': $rootScope.app._id });
+	                //$location.url('/user/' + $rootScope.currentUser._id + '/' + );
 	            },function(err){
 					console.log("Something went wrong while getting the profile:" , err);
 				});

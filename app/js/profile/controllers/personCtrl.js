@@ -2,10 +2,8 @@
 
 class PersonCtrl {
 
-    constructor($rootScope, $routeParams, appService, userService, countryService, authService, testService) {
+    constructor($rootScope, userService, countryService, authService, testService) {
         this.$rootScope = $rootScope;
-        this.$routeParams = $routeParams;
-        this.appService = appService;
         this.countryService = countryService;
         this.authService = authService;
         this.testService = testService;
@@ -94,4 +92,6 @@ class PersonCtrl {
 
 }
 
-angular.module('feedID.profile').controller('PersonCtrl', PersonCtrl);
+angular
+    .module('feedID.profile')
+    .controller('PersonCtrl', PersonCtrl);

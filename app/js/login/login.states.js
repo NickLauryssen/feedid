@@ -5,15 +5,15 @@
 		.module('feedID.login')
 		.config(config);
 
-		config.$inject = ['$stateProvider', '$urlRouterProvider'];
+		config.$inject = ['$stateProvider', 'templateProvider'];
 
-		function config($stateProvider, $urlRouterProvider) {
+		function config($stateProvider, templateProvider) {
 			$stateProvider
 				.state('app.login',
 				{
 					'url': '/login',
 					controller: 'LoginCtrl',
-					templateUrl: 'partials/login.html'
+					templateUrl: templateProvider.formatUrl('login', 'login')
 				});
 		}
 

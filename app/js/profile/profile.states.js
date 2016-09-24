@@ -1,24 +1,21 @@
-(function() {
-	'use strict';
+angular
+	.module('feedID.profile')
+	.config(config);
 
-	angular
-		.module('feedID.profile')
-		.config(config);
+config.$inject = ['$stateProvider', 'templateProvider'];
 
-		function config($stateProvider) {
-			$stateProvider
-				.state('profile', {
-					'url': '/user/:userId/:appId',
-					'templateUrl': 'partials/person.html',
-					'controller': 'PersonCtrl',
-					'controllerAs': 'vm'
-				})
-				.state('profile.overview', {
-					'templateUrl': 'partials/overview.html'
-				})
-				.state('profile.admin', {
-					'templateUrl': 'partials/administrator.html'
-				});
-		}
-
-})();
+function config($stateProvider, templateProvider) {
+	$stateProvider
+	.state('profile', {
+			'url': '/user/:userId/:appId',
+			'templateUrl': templateProvider.formatUrl('person', 'profile'),
+			'controller': 'PersonCtrl',
+			'controllerAs': 'vm'
+	})
+	.state('profile.overview', {
+			'templateUrl': templateProvider.formatUrl('overview', 'profile')
+	})
+	.state('profile.admin', {
+			'templateUrl': templateProvider.formatUrl('administrator', 'profile')
+	});
+}

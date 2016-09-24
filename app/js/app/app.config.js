@@ -11,7 +11,7 @@
 			api: 'https://feedid.com/backend'
 		});
 
-	function config($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+	function config($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider, templateProvider) {
 
 		let checkLoggedin = ($q, $timeout, $http, $injector, $rootScope) => {
 			var deferred = $q.defer();
@@ -55,20 +55,20 @@
 	 	$stateProvider.state('app',
 		{
 			'url': '/',
-			controller: 'MainCtrl',
-			templateUrl : 'partials/main.html'
+			'controller': 'MainCtrl',
+			'templateUrl': templateProvider.formatUrl('main', 'app')
 		})
 	    .state('app.password',
 	    {
 			'url': '/password/:userId',
-	        controller: 'PasswordCtrl',
-	        templateUrl: 'partials/new.html'
+	        'controller': 'PasswordCtrl',
+	        'templateUrl': templateProvider.formatUrl('new', 'app')
 	    })
 		.state('app.admin',
 		{
 			'url': '/admin',
-			controller: 'AdminCtrl',
-			templateUrl: 'partials/admin.html'
+			'controller': 'AdminCtrl',
+			'templateUrl': templateProvider.formatUrl('admin', 'app')
 			/*resolve: {
 	    			loggedin: checkLoggedin
 	    		}*/

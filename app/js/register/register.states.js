@@ -5,27 +5,27 @@
 		.module('feedID.register')
 		.config(config);
 
-		config.$inject = ['$stateProvider'];
+		config.$inject = ['$stateProvider', 'templateProvider'];
 
-		function config($stateProvider) {
+		function config($stateProvider, templateProvider) {
 			$stateProvider
 				.state('app.register',
 				{
 					'url': '/register',
 					controller: 'RegisterCtrl',
-					templateUrl: 'partials/register.html'
+					templateUrl: templateProvider.formatUrl('register', 'register')
 				})
 				.state('app.register.confirm',
 				{
 					'url': '/confirm/:activationId',
 					controller: 'ConfirmCtrl',
-					templateUrl: 'partials/confirm.html'
+					templateUrl: templateProvider.formatUrl('confirm', 'register')
 				})
 				.state('app.register.photoupload',
 				{
 					'url': '/photoupload',
 					controller: 'UploadCtrl',
-					templateUrl: 'partials/photoupload.html'
+					templateUrl: templateProvider.formatUrl('photoupload', 'register')
 				})
 				.state('app.register.uploader',
 				{

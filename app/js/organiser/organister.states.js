@@ -5,15 +5,15 @@
 		.module('feedID.organiser')
 		.config(config);
 
-		config.$inject = ['$stateProvider'];
+		config.$inject = ['$stateProvider', 'templateProvider'];
 
-		function config($stateProvider) {
+		function config($stateProvider, templateProvider) {
 			$stateProvider
 			.state('app.organiser',
 			{
 				'url': '/user/organiser',
 				controller: 'OrganiserCtrl',
-				templateUrl: 'partials/organiser.html'
+				templateUrl: templateProvider.formatUrl('organiser', organiser)
 			})
 		}
 

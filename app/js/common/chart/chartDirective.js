@@ -1,10 +1,10 @@
-function FiChart() {
+function FiChart(templateProvider) {
 
 	const directive = {
 		restrict: 'A',
-		templateUrl: 'partials/chart.html',
+		templateUrl: templateProvider.formatUrl('chart', 'common/chart'),
 		scope: {
-			tests: "=",
+			tests: '=',
 			results: '='
 		},
 		controller: 'chartCtrl',

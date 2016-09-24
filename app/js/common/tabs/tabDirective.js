@@ -1,8 +1,8 @@
-function FiTab() {
+function FiTab(template) {
 
 	const directive = {
 		restrict: 'A',
-		templateUrl: 'partials/tab.html',
+		templateUrl: template.formatUrl('tab', 'common/tabs'),
 		scope: {
 			'showAdmin': '='
 		},
@@ -13,6 +13,8 @@ function FiTab() {
 
 	return directive;
 
-}
+} 
+
+FiTab.$inject = ['template'];
 
 angular.module('common.tab').directive('fiTab', FiTab);

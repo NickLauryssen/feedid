@@ -1,6 +1,6 @@
 'use strict';
 
-const RESOURCE_URL = "https://feedid.com/backend";
+const RESOURCE_URL = 'https://feedid.com/backend';
 
 class ResourceManager {
 	constructor($http) {

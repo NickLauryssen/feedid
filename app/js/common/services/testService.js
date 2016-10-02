@@ -20,8 +20,8 @@ class TestService {
 		);
 	}
 
-	getResults(userId, params) {
-		return this.$http.get(this.config.api + '/api/testResults/' + userId, { params: params}).then(
+	getResults(userId, requester) {
+		return this.$http.get(this.config.api + '/api/testResults/' + userId + '/' + requester).then(
 			(result) => {
 				return result;
 			},

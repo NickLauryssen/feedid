@@ -45,7 +45,7 @@ class PersonCtrl {
                  /**
                   * Get all testresults from a specific user.
                   */
-                this.testService.getResults(this.user._id, {'_id': this.$rootScope.currentUser._id}).then(
+                this.testService.getResults(this.user._id, this.$rootScope.currentUser._id).then(
                     (testResults) => {
                         for (let result of _.compact(testResults)) {
                             if (result === null){

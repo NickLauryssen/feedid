@@ -1,6 +1,6 @@
-# feedid-website
+# Feedid-website
 
-Install this project:
+#### Installation steps:
 
 1.  npm install
 2.  bower install

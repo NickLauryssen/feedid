@@ -1,5 +1,5 @@
 <h3>Test</h3>
-<select ng-model="vm.selectedTest" ng-options="t.name for t in vm.tests | orderBy:name" class="length4" ></select><br />
+<select ng-change="vm.loadTests()" ng-model="vm.selectedTest" ng-options="t.name for t in vm.tests.data | orderBy:name" class="length4" ></select><br />
 <h3>{{vm.selectedTest.name}}</h3>
 <div ng-if="vm.selectedTest.chart==null">
 	Geen data beschikbaar

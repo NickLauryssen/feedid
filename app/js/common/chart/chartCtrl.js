@@ -1,3 +1,4 @@
+// FOR REFERENCE https://bouil.github.io/angular-google-chart/#/fat
 class ChartCtrl {
 
 	constructor() {
@@ -10,33 +11,43 @@ class ChartCtrl {
 		 this.cols = [];
 		 this.rows = [];
 		 this.aChart = {};
-		 this.init();
+		 this.aChart.data = {};
 	}
 
-	init() {
-		tests();
-		results();
-	}
+	loadTests() {
+		//init chart
+		this.aChart = {};
+		this.aChart.data = {};
+		this.aChart.type = "LineChart";
+		this.aChart.displayed = "true";
 
-	tests() {
-		for (let test of this.tests) {
-			let testId = test._id;
-			this.aChart.type = "LineChart";
-			this.aChart.displayed = "true";
-			this.aChart.data = {};
+		// clear char cols (X) and rows (Y)
+		this.cols = [];
+		this.rows = [];
 
-			this.cols.push({
-				"id": "time",
-				"label": "Time",
-				"type": "string",
-				"p": {}
-			});
+		// first cols push is the name of the X-axis
+		this.cols.push({
+			"id": "time",
+			"label": "Time",
+			"type": "string",
+			"p": {}
+		});
 
-			subTests(test);
+
+		//for each test, check if it is the selectedTest
+		for (let test of this.tests.data) {
+			if(test._id == this.selectedTest._id) {
+				this.loadSubTests(test);
+				break;
+			}
+
 		}
 	}
 
-	subTests(test) {
+	// from the found test we need al the subtests ( some tests do have subtests)
+	loadSubTests(test) {
+		// for each subtest we add an extra line to the chart.
+		// All but the first object in the cols( X-axis ) array are lines on the graph == legenda entry
 		for (let subTest of test.subTests) {
 			this.cols.push({
 				"id": subTest.name,
@@ -46,32 +57,36 @@ class ChartCtrl {
 			});
 		}
 
-		this.aChart.data.cols = cols;
+		this.aChart.data.cols = this.cols;
+			this.loadResults();
 	}
 
-	results() {
+	// function called when al subtests (lines) are loaded
+	// this function adds values to the Y axis.
+	loadResults() {
 		/**
 		 * For each result of a user.
 		 */
-		for (let result of this.results) {
-			if(result.test === testId) {
+		for (let result of this.results.data) {
+			if(result.test === this.selectedTest._id) {
 				let obj = {};
-
-				obj.c.push({ 'v': result.time });
-
-				this.rows.push(subResults(result));
+				obj.c = [];
+				obj.c.push({ 'v': result.time.split(" ")[0] });
+				obj.c.push(this.loadSubResults(result));
+				this.rows.push(obj);
 			}
 		}
 
 		this.aChart.data.rows = this.rows;
-		test.chart = this.rows.length < 1 ? this.aChart : null;
+		this.selectedTest.chart = this.rows.length < 1 ?  null : this.aChart;
+
 	}
 
-	subResults(result) {
+	loadSubResults(result) {
 		let values = {};
 
 		for (let subResult of result.subResults) {
-			values.c.push({ 'v': subResult});
+			values.v = subResult;
 		}
 
 		return values;

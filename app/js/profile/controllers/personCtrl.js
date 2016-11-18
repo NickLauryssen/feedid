@@ -39,21 +39,27 @@ class PersonCtrl {
          */
          this.testService.getTests(this.user._id).then(
              (tests) => {
+               console.log(tests);
                 this.tests = tests;
-                this.selectedTest = tests[0];
+                console.log(this.tests);
+                //this.selectedTest = tests[0];
 
                  /**
                   * Get all testresults from a specific user.
                   */
                 this.testService.getResults(this.user._id, this.$rootScope.currentUser._id).then(
                     (testResults) => {
-                        for (let result of _.compact(testResults)) {
-                            if (result === null){
-                                this.tests = [];
-                            } else{
-                                this.testResults = testResults;
-                            }
-                        }
+                      this.testResults = testResults;
+
+                        // for (let result in testResults) {
+                        //   console.log("TTTTTTT")
+                        //     if (result === null){
+                        //         this.tests = [];
+                        //     } else{
+                        //         console.log(testResults)
+                        //         this.testResults = testResults;
+                        //     }
+                        // }
                     }
                 );
             }

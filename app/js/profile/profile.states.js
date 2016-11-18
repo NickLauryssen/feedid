@@ -13,7 +13,9 @@ function config($stateProvider, templateProvider) {
 			'controllerAs': 'vm'
 	})
 	.state('profile.overview', {
-			'templateUrl': templateProvider.formatUrl('overview', 'profile')
+			'templateUrl': templateProvider.formatUrl('overview', 'profile'),
+			'controller': 'PersonCtrl',
+			'controllerAs': 'vm'
 	})
 	.state('profile.admin', {
 			'templateUrl': templateProvider.formatUrl('administrator', 'profile')

@@ -1,8 +1,8 @@
-function FiChart(templateProvider) {
+function FiChart(template) {
 
 	const directive = {
 		restrict: 'A',
-		templateUrl: templateProvider.formatUrl('chart', 'common/chart'),
+		templateUrl: template.formatUrl('chart', 'common/chart'),
 		scope: {
 			tests: '=',
 			results: '='

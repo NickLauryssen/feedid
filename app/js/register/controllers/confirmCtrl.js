@@ -1,5 +1,6 @@
+'use strict';
 
-app.controller('ConfirmCtrl', function ($scope, $rootScope, $http, $location, $routeParams) {
+angular.module('feedID.register').controller('ConfirmCtrl', function ($scope, $rootScope, $http, $location, $routeParams) {
     $scope.countries = [];
     $scope.address = [];
     $scope.actId = $routeParams.activationId;

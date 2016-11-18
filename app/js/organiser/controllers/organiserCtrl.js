@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('OrganiserCtrl', function($scope, $rootScope, $location, $http, $timeout, $window) {
+angular.module('feedID.organiser').controller('OrganiserCtrl', function($scope, $rootScope, $location, $http, $timeout, $window) {
     $scope.activities = [];
     $scope.locations = [];
     $scope.events = [];

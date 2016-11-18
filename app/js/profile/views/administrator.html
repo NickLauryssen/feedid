@@ -1,0 +1,49 @@
+<div class="administrator tabcontent" ng-show="vm.canDoAdmin">
+	<h2 class="">Klant toevoegen</h2>
+	<form id="regForm" name="regForm" ng-submit="vm.register()" novalidate>
+		<div class="control-group">
+			<label class="control-label">Voornaam</label>
+			<input type="text" name="firstname" id="firstname" placeholder="Voornaam" ng-model="vm.client.firstname" />
+		</div>
+		<div class="control-group">
+			<label class="control-label">Achternaam</label>
+			<input type="text" name="lastname" id="lastname" placeholder="Achternaam" ng-model="vm.client.lastname" />
+		</div>
+		<div class="control-group">
+			<label class="control-label">Geslacht</label>
+			<select ng-model="vm.client.sex" ng-options="sex for sex in ['Man','Vrouw']" ></select>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Geboortedatum</label>
+			<input type="text" ng-model="vm.client.dateofbirth" class="datepicker"  />
+		</div>
+		<div class="control-group">
+			<label class="control-label">E-mailadres</label>
+			<input  type="email" name="email" id="email" placeholder="E-mailadres" ng-model="vm.client.email" required/><br />
+		</div>
+		<div class="control-group">
+			<label class="control-label">Straat + huisnummer</label>
+			<input type="text" placeholder="Straat" ng-model="vm.client.street"  />
+			<input type="text" placeholder="Huisnr." ng-model="vm.client.number"  />
+		</div>
+		<div class="control-group">
+			<label class="control-label">Postcode</label></td>
+			<input type="text" placeholder="Postcode" ng-model="vm.client.postal_code" />
+		</div>
+		<div class="control-group">
+			<label class="control-label">Woonplaats</label></td>
+			<input type="text" placeholder="Woonplaats" ng-model="vm.client.city"  />
+		</div>
+		<div class="control-group">
+			<label class="control-label">Land</label>
+			<select ng-model="vm.client.country" ng-options="c.country as c.country for c in vm.countries | orderBy:country_code" ></select>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Mobiel</label>
+			<input type="text" placeholder="Mobiel" ng-model="vm.client.mobile"  />
+		</div>
+		<div class="control-group">
+			<button id="btn_register" type="submit" ng-click="infoTextF={color:'red'}" class="btn btn-primary">Maak klantenprofiel aan</button>
+		</div>
+	</form>
+</div>

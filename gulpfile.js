@@ -11,12 +11,13 @@ let gulp = require('gulp'),
 	notify = require('gulp-notify'),
 	cache = require('gulp-cache'),
 	livereload = require('gulp-livereload'),
+	runSequence = require('run-sequence'),
 	del = require('del');
 
 let DST = 'dist';
 
 let path = {
-	'html': 'app/*.html',
+	'html': 'app/**/*.html',
 	'partials': 'app/partials/**/*.html',
 	'css': 'app/css/**/*.css',
 	'scripts': 'app/js/**/*.js',
@@ -105,8 +106,11 @@ gulp.task('connect', () => {
 });
 
 // Default task
-gulp.task('default', ['watch', 'html', 'partials', 'js', 'css', 'images', 'clean'], () => {
-	gulp.start('connect');
+gulp.task('default', () => {
+	runSequence('clean',
+				['html', 'partials', 'js', 'css', 'images'],
+				'connect',
+				'watch');
 });
 
 // Watch
@@ -114,7 +118,7 @@ gulp.task('watch', () => {
 	// Watch html filters
 	gulp.watch(path.html, ['html']);
 	// Watch .js files
-	gulp.watch(path.scripts, ['scripts']);
+	gulp.watch(path.scripts, ['js']);
 	// Watch image files
 	gulp.watch(path.images, ['images']);
 	// Watch css files

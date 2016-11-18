@@ -1,4 +1,6 @@
-app.controller('RegisterCtrl', function($scope, $rootScope, $http, $location) {
+'use strict';
+
+angular.module('feedID.register').controller('RegisterCtrl', function($scope, $rootScope, $http, $location) {
 	$scope.register = function() {
         $http.post(url + '/api/users', $scope.user)
             .success(function(message) {

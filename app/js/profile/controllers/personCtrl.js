@@ -41,8 +41,7 @@ class PersonCtrl {
              (tests) => {
                console.log(tests);
                 this.tests = tests;
-                console.log(this.tests);
-                //this.selectedTest = tests[0];
+                this.selectedTest = tests[0];
 
                  /**
                   * Get all testresults from a specific user.

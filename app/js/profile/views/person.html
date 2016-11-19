@@ -16,7 +16,9 @@
 </script>
 <div id="profile">
 	<div id="content">
-		<div id="ruler"></div>
+		<div id="ruler">
+      <div id="tabs" fi-tab show-admin="vm.canDoAdmin"></div>
+    </div>
 		<div id="sidemenu">
             <div ng-hide="vm.editorEnabled">
                 <img class="profilepicture" alt="profile picture" src="https://feedid.com/backend/images/{{user.picture}}" />

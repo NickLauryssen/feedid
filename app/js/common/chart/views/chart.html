@@ -2,6 +2,6 @@
 <select ng-change="vm.loadTests()" ng-model="vm.selectedTest" ng-options="t.name for t in vm.tests.data | orderBy:name" class="length4" ></select><br />
 <h3>{{vm.selectedTest.name}}</h3>
 <div ng-if="vm.selectedTest.chart==null">
-	Geen data beschikbaar
+	{{vm.noDataText}}
 </div>
 <div ng-if="vm.selectedTest.chart!=null" google-chart chart="vm.selectedTest.chart" style="{{ cssStyle }}" class="ng-scope ng-isolate-scope"></div>

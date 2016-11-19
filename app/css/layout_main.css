@@ -12,6 +12,10 @@ html, body, #timeline, .row{
 	min-width: 1000px;
 }
 
+body>div{
+	height: calc(100% - 70px);
+}
+
 /* INPUT FIELDS*/
 
 input, textarea, select {
@@ -99,7 +103,7 @@ input, textarea, select{
 	width: 90px;
 	padding: 0px;
 	margin: 10px 5px;
-	
+
 	float: left;
 }
 
@@ -132,7 +136,7 @@ input, textarea, select{
 	padding: 0px;
 	padding-left: 20px;
 	margin: 0px;
-	background-color: #ffffff;
+	background-color: rgba(255,255,255,0.3);
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -272,7 +276,7 @@ input, textarea, select{
 }
 
 .jquerybubblepopup-innerHtml .profilepicture{
- 	position: absolute; 
+ 	position: absolute;
 	top: 10px;
 	left: 10px;
 	height: 96px;
@@ -317,4 +321,3 @@ input, textarea, select{
 	width: 100px;
 	border: 1px solid red;
 }
-

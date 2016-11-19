@@ -1,5 +1,8 @@
 @CHARSET "ISO-8859-1";
 
+#profile {
+	height: 80%;
+}
 #content-background{
 	position: absolute;
 	top: 0px;
@@ -13,6 +16,7 @@
 #content{
 	z-index: -1;
 	background-color: #eeeeee;
+	height: 100%;
 }
 
 #sidemenu {
@@ -126,5 +130,3 @@
     background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
     text-decoration: none;
 }
-
-

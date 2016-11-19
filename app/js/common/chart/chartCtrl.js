@@ -12,8 +12,9 @@ class ChartCtrl {
 		 this.rows = [];
 		 this.aChart = {};
 		 this.aChart.data = {};
-	}
+		 this.noDataText= "Selecteer een test";
 
+	}
 	loadTests() {
 		//init chart
 		this.aChart = {};
@@ -37,6 +38,7 @@ class ChartCtrl {
 		//for each test, check if it is the selectedTest
 		for (let test of this.tests.data) {
 			if(test._id == this.selectedTest._id) {
+				//If it is the selected Test , then load its subtests
 				this.loadSubTests(test);
 				break;
 			}
@@ -58,30 +60,42 @@ class ChartCtrl {
 		}
 
 		this.aChart.data.cols = this.cols;
-			this.loadResults();
+
+		// now we have setup the chart, lets get some data in it!
+		this.loadResults();
 	}
 
 	// function called when al subtests (lines) are loaded
 	// this function adds values to the Y axis.
 	loadResults() {
+
 		/**
 		 * For each result of a user.
 		 */
 		for (let result of this.results.data) {
+			// if the result belongs to the selected test add the result
 			if(result.test === this.selectedTest._id) {
-				let obj = {};
-				obj.c = [];
-				obj.c.push({ 'v': result.time.split(" ")[0] });
-				obj.c.push(this.loadSubResults(result));
-				this.rows.push(obj);
+				//for each data entry, 'c' is used in google-charts to set the information of the data entry
+				//The first value pushed in 'c' is the value shown on the X-axis, the second is the actual (numerical) value in the chart
+				// this numerical value is a point on the chart
+				let dataEntry = {};
+				dataEntry.c = [];
+				dataEntry.c.push({ 'v': result.time.split(" ")[0] });
+				dataEntry.c.push(this.loadSubResults(result));
+				this.rows.push(dataEntry);
 			}
 		}
 
+		// add the rows data set to the chart itself.
 		this.aChart.data.rows = this.rows;
+		// if there is data available then add the graph to the selectedTest to show it, else don't
 		this.selectedTest.chart = this.rows.length < 1 ?  null : this.aChart;
+		this.noDataText= "Geen data beschikbaar";
 
 	}
 
+
+	// Actual value of a subresult is read in loadSubResults
 	loadSubResults(result) {
 		let values = {};
 

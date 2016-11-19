@@ -1,11 +1,13 @@
 class TabCtrl {
 
-	constructor() {
-
+	constructor($state) {
+		this.selectedTab = 1;
+		this.state = $state;
 	}
 
 	navigate() {
-		console.log('Change state');
+		console.log('Change state', this.selectedTab);
+		this.state.go('profile.overview');
 	}
 
 }

@@ -1,6 +1,5 @@
-'use strict';
+import commonModule from './common/common.module';
 
-angular.module('common.filters', []);
 angular.module('common.search', []);
 angular.module('common.services', []);
 angular.module('common.tab', []);
@@ -11,4 +10,13 @@ angular.module('feedID.organiser', ['common']);
 angular.module('feedID.profile', ['common']);
 angular.module('feedID.register', ['common']);
 angular.module('feedID.login', ['common']);
-angular.module('feedID', ['common', 'feedID.login', 'feedID.register', 'feedID.profile', 'feedID.organiser', 'ngResource', 'ngSanitize', 'googlechart', 'ui.bootstrap', 'ui.router']);
+
+const ROOT_MODULE_NAME = 'FeedID';
+const dependencies = [
+	commonModule.name
+];
+
+export default angular
+	.module(ROOT_MODULE_NAME, dependencies);
+	
+//['common', 'feedID.login', 'feedID.register', 'feedID.profile', 'feedID.organiser', 'ngResource', 'ngSanitize', 'googlechart', 'ui.bootstrap', 'ui.router']

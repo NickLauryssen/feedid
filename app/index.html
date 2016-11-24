@@ -28,6 +28,7 @@
 			</div>
 			<!-- BANNER WHEN LOGGED IN -->
 			<div class="menu" ng-show="loggedin">
+				<fi-search></fi-search>
 				<div class="separator" id="loginuser">
 					<a href="#/user/{{currentUser._id}}/{{app._id}}">
 					<img alt="profile picture" src="https://feedid.com/backend/images/{{currentUser.picture}}" />

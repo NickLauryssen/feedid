@@ -1,0 +1,9 @@
+<div id="searchFieldContainer">
+  <input class="searchfield" ng-change="vm.doSearch();" type="text" ng-model="vm.searchInput"></input>
+  <div id="search-icon"></div>
+</div>
+<div id="user-list" ng-show="vm.foundMembers.length > 0">
+  <div  class="search-item" ng-repeat="member in vm.foundMembers" ng-click="vm.loadProfile(member._id);">
+    <a>{{member.firstname}} {{member.lastname}}</a>
+  </div>
+</div>

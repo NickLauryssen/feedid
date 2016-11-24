@@ -55,6 +55,12 @@ class UserService {
 		);
 	}
 
+	searchUser(value){
+		console.log("Searching for: ", value);
+		return this.$http.get(this.config.api + '/api/users/search/'+value);
+
+	}
+
 }
 
 angular.module('common.services').service('userService', UserService);

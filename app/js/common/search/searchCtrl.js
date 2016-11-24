@@ -9,14 +9,19 @@ class SearchCtrl {
   }
 
   doSearch(){
-    var queryResult = this.userService.searchUser(this.searchInput);
-    queryResult.then(
-			(result) => {
-				this.foundMembers = result.data;
-			},
-			(error) => {
-				console.log("Error while searching users");
-			});
+    if(this.searchInput.length >= 1){
+      var queryResult = this.userService.searchUser(this.searchInput);
+      queryResult.then(
+        (result) => {
+          this.foundMembers = result.data;
+        },
+        (error) => {
+          console.log("Error while searching users");
+        });
+    }else {
+      this.foundMembers = [];
+    }
+
   }
 
   loadProfile(id){

@@ -33,7 +33,7 @@
 
 #banner .item img:hover{
 	opacity:0.6;
-	filter:alpha(opacity=60); /* For IE8 and earlier */	
+	filter:alpha(opacity=60); /* For IE8 and earlier */
 	cusor: pointer;
 	cursor: hand;
 }
@@ -173,4 +173,65 @@
 
 #logout {
 	width: 50px !important;
+}
+
+#banner fi-search{
+	position: absolute;
+	top:20px;
+	background-color: transparent;
+	width: 200px;
+	right:300px;
+	border-radius:4px;
+
+}
+#banner fi-search input{
+	width:85%;
+	border:none;
+}
+
+#searchFieldContainer {
+	background-color: white;
+  border-radius: 4px;
+}
+
+#banner fi-search input:focus{
+	box-shadow: none;
+	top: 0px;
+	left: 0px;
+}
+#banner fi-search #search-icon{
+	background-image: url('../img/ic_search.png');
+	background-repeat: no-repeat;
+	background-size: 18px;
+	background-position-y: 3px;
+	float: right;
+	width: 24px;
+	height: 24px;
+}
+#banner fi-search a{
+	color: #000000;
+	display: block;
+	cursor: pointer;
+	line-height: 25px;
+}
+
+#banner fi-search #user-list{
+	background-color: rgba(255,255,255,0.8);
+	margin-top: 10px;
+	border-radius: 4px;
+	padding: 2px;
+}
+#banner fi-search #user-list .search-item{
+	height: 25px;
+	border-bottom: 1px solid grey;
+	padding-left: 10px;
+}
+
+#banner fi-search #user-list .search-item:hover{
+	background-color: #28444b;
+
+}
+
+#banner fi-search #user-list .search-item:hover a{
+	color: white;
 }

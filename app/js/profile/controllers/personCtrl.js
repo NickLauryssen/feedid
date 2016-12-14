@@ -8,7 +8,7 @@ class PersonCtrl {
         this.authService = authService;
         this.testService = testService;
 
-        this.countries = [];
+        this.countries = [{country: 'test'}];
 
         this.user = this.$rootScope.user;
         this.tests = [];
@@ -29,9 +29,6 @@ class PersonCtrl {
     }
 
     init() {
-        this.countryService.getCountries().then(() => {
-            this.countries = this.countryService.countries;
-        });
 
         /**
          * These charts are filled with testresults for this test.

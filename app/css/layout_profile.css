@@ -66,8 +66,15 @@
 .administrator input, select {
     display: inline-block;
     float: left;
+		width:300px;
 }
 
+.administrator input.street{
+	width: 250px;
+}
+.administrator input.streetnr{
+	width: 50px;
+}
 #btn_register {
     clear: both;
     float: left;
@@ -126,5 +133,3 @@
     background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
     text-decoration: none;
 }
-
-

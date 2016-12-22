@@ -1,11 +1,13 @@
 class PanelCtrl {
-	constructor($http, $rootScope, appService, userService) {
+	constructor($http, $rootScope, appService, userService, countryService) {
 		this.appService = appService;
 		this.userService = userService;
 		this.$http = $http;
 		this.$rootScope = $rootScope;
+		this.countryService = countryService;
 
 		this.client = {};
+		this.countries = {};
 
 		//this.user = userService.currentUser();
 		this.user = $rootScope.currentUser;
@@ -22,6 +24,13 @@ class PanelCtrl {
 	}
 
 	init() {
+		console.log("CountrySrvice", this.countryService);
+		console.log(this.countryService.getCountries());
+			this.countryService.getCountries().then(() => {
+					this.countries = this.countryService.countries;
+					console.log("Got countries", this.countries);
+
+			});
 		/**
          * This function is responsible for the content of the google charts.
          */

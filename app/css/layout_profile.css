@@ -70,8 +70,15 @@
 .administrator input, select {
     display: inline-block;
     float: left;
+		width:300px;
 }
 
+.administrator input.street{
+	width: 250px;
+}
+.administrator input.streetnr{
+	width: 50px;
+}
 #btn_register {
     clear: both;
     float: left;

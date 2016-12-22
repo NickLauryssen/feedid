@@ -15,7 +15,7 @@
 		</div>
 		<div class="control-group">
 			<label class="control-label">Geboortedatum</label>
-			<input type="text" ng-model="vm.client.dateofbirth" class="datepicker"  />
+			<input type="date" ng-model="vm.client.dateofbirth" class="datepicker"  />
 		</div>
 		<div class="control-group">
 			<label class="control-label">E-mailadres</label>
@@ -23,8 +23,8 @@
 		</div>
 		<div class="control-group">
 			<label class="control-label">Straat + huisnummer</label>
-			<input type="text" placeholder="Straat" ng-model="vm.client.street"  />
-			<input type="text" placeholder="Huisnr." ng-model="vm.client.number"  />
+			<input type="text" class="street" placeholder="Straat" ng-model="vm.client.street"  />
+			<input type="text" class="streetnr" placeholder="Huisnr." ng-model="vm.client.number"  />
 		</div>
 		<div class="control-group">
 			<label class="control-label">Postcode</label></td>
@@ -37,6 +37,10 @@
 		<div class="control-group">
 			<label class="control-label">Land</label>
 			<select ng-model="vm.client.country" ng-options="c.country as c.country for c in vm.countries | orderBy:country_code" ></select>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Telefoon</label>
+			<input type="text" placeholder="Phone" ng-model="vm.client.phone_number"  />
 		</div>
 		<div class="control-group">
 			<label class="control-label">Mobiel</label>

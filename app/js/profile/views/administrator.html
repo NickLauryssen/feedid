@@ -39,6 +39,10 @@
 			<select ng-model="vm.client.country" ng-options="c.country as c.country for c in vm.countries | orderBy:country_code" ></select>
 		</div>
 		<div class="control-group">
+			<label class="control-label">Telefoon</label>
+			<input type="text" placeholder="Phone" ng-model="vm.client.phone_number"  />
+		</div>
+		<div class="control-group">
 			<label class="control-label">Mobiel</label>
 			<input type="text" placeholder="Mobiel" ng-model="vm.client.mobile"  />
 		</div>

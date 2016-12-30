@@ -1,0 +1,113 @@
+.medic-card {
+  background-image: url("../img/medic-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:600px;
+  height: 600px;
+  margin-top:20px;
+
+}
+
+/*
+* MEDIC POINT
+*/
+.medic-point {
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+/*.medic-point:hover {
+  opacity: 1;
+}*/
+.visible {
+  opacity: 1;
+}
+.invisible {
+  opacity: 0;
+}
+.medic-point__arrow {
+  width:10px;
+  height:10px;
+  position: absolute;
+  background-size: cover;
+}
+.medic-point__arrow:hover {
+  opacity: 0.4;
+}
+.medic-point__arrow--top{
+  left: 11px;
+  top: 0px;
+}
+.medic-point__arrow--left{
+  left: 0px;
+  top: 11px;
+}
+.medic-point__mid{
+  width: 10px;
+  height: 10px;
+  border-width: 1px;
+  border-style: solid;
+  position: absolute;
+  left: 11px;
+  top: 11px;
+  border-radius: 50%;
+}
+.medic-point__mid:hover {
+  opacity: 0.4;
+}
+.medic-point__arrow--right{
+  left: 22px;
+  top: 11px;
+}
+.medic-point__arrow--bottom{
+  left: 11px;
+  top: 22px;
+}
+
+/*
+* MEDIC INPUT
+*/
+.medic-card__input {
+  position: relative;
+  top: -1589px;
+  left: 100px;
+  background-color: rgba(255,255,255,0.85);
+  width: 400px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px #888888;
+  }
+.medic-card__input{
+  padding:15px;
+}
+.medic-card__input label{
+  font-weight: normal;
+  margin-bottom: 2px;
+}
+.medic-card__input__col {
+  width: 33%;
+  float:left;
+}
+.medic-card__input__col label input{
+  margin-right: 10px;
+}
+.medic-card__input__textuals{
+  width: 100%;
+  display: inline-block;
+  margin-top:10px;
+}
+.medic-card__input__textuals label{
+  width: 100%;
+}
+.medic-card__input__textuals label input{
+  width: 100%;
+}
+.medic-card__input__buttons{
+  width: 100%;
+  text-align: right;
+}
+
+.medic-card__input__buttons input{
+    border: 1px solid black;
+    background: transparent;
+    margin-top: 10px;
+}

@@ -2,833 +2,725 @@ var medicPoints = [
   {
     'code':"Hoofd V",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury':{}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [38,147],
+    'position' : [38,146],
     'rotation': 0,
-    'date': ""
   },
   {
     'code':"Hals",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-'position' : [50,147],
+    'position' : [80,146],
     'rotation': 0,
-    'date': ""
   },
   {
     'code':"Schouder VR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [40,102],
+
+    'position' : [104,102],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Arm B VR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [54,85],
+
+    'position' : [150,85],
     'rotation': 20,
-    'date': ""
+
   },
   {
     'code':"Elleboog VR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [54,70],
+
+    'position' : [182,70],
     'rotation': 22,
-    'date': ""
+
   },
   {
     'code':"Arm O VR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [63,52],
+
+    'position' : [220,52],
     'rotation': 23,
-    'date': ""
+
   },
   {
     'code':"Hand VR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [66,31],
+
+    'position' : [258,31],
     'rotation': 26,
-    'date': ""
+
   },
   {
     'code':"Schouder VL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-120,190],
+
+    'position' : [103,190],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Arm B VL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-107,207],
+
+    'position' : [148,207],
     'rotation': -22,
-    'date': ""
+
   },
   {
     'code':"Elleboog VL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-105,222],
+
+    'position' : [181,222],
     'rotation': -22,
-    'date': ""
+
   },
   {
     'code':"Arm O VL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-97,240],
+
+    'position' : [222,240],
     'rotation': -22,
-    'date': ""
+
   },
   {
     'code':"Hand VL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-94,261],
+
+    'position' : [258,261],
     'rotation': -22,
-    'date': ""
+
   },
   {
     'code':"Borst",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-260,147],
+
+    'position' : [125,146],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Buik B",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-235,147],
+
+    'position' : [179,146],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Buik O",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-225,147],
+
+    'position' : [222,146],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Heup VR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-216,105],
+
+    'position' : [258,105],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Bekken V",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-248,146],
+
+    'position' : [258,146],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Heup VL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-280,186],
+
+    'position' : [258,186],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Been B VR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-238,114],
+
+    'position' : [336,114],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Knie VR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-202,115],
+
+    'position' : [405,115],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Been O VR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-154,112],
+
+    'position' : [478,112],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Voet VR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-124,108],
+
+    'position' : [548,108],
     'rotation': 25,
-    'date': ""
+
   },
   {
     'code':"Been B VL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-366,180],
+
+    'position' : [336,180],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Knie VL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-330,178],
+
+    'position' : [405,178],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Been O VL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-282,180],
+
+    'position' : [478,180],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Voet VL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-252,183],
+
+    'position' : [548,183],
     'rotation': -25,
-    'date': ""
+
   },
   {
     'code':"Hoofd A",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-800,428],
+
+    'position' : [30,428],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Nek",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-787,428],
+
+    'position' : [75,428],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Schouder AR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-796,474],
+
+    'position' : [100,474],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Arm B AR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-782,490],
+
+    'position' : [146,490],
     'rotation': -22,
-    'date': ""
+
   },
   {
     'code':"Elleboog AR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-778,506],
+
+    'position' : [185,506],
     'rotation': -22,
-    'date': ""
+
   },
   {
     'code':"Arm O AR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-773,521],
+
+    'position' : [221,521],
     'rotation': -22,
-    'date': ""
+
   },
   {
     'code':"Hand AR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-760,539],
+
+    'position' : [262,539],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Schouder AL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-956,381],
+
+    'position' : [100,381],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Arm B AL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-940,364],
+
+    'position' : [146,364],
     'rotation': 22,
-    'date': ""
+
   },
   {
     'code':"Elleboog AL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-938,349],
+
+    'position' : [185,349],
     'rotation': 22,
-    'date': ""
+
   },
   {
     'code':"Arm O AL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-932,332],
+
+    'position' : [221,332],
     'rotation': 22,
-    'date': ""
+
   },
   {
     'code':"Hand AL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-920,315],
+
+    'position' : [262,315],
     'rotation': 22,
-    'date': ""
+
   },
   {
     'code':"Rug B",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-1098,429],
+
+    'position' : [117,428],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Rug M",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-1074,429],
+
+    'position' : [174,428],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Rug O",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-1058,429],
+
+    'position' : [225,429],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Heup AR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-1043,467],
+
+    'position' : [270,467],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Bekken A",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-1075,428],
+
+    'position' : [270,428],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Heup AL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-1107,388],
+
+    'position' : [270,388],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Been B AR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-1064,460],
+
+    'position' : [336,460],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Knie AR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-1032,460],
+
+    'position' : [404,460],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Been O AR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-990,462],
+
+    'position' : [478,462],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Voet AR",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-950,466],
+
+    'position' : [554,466],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Been B AL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-1193,396],
+
+    'position' : [336,396],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Knie AL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-1161,397],
+
+    'position' : [404,397],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Been O AL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-1118,392],
+
+    'position' : [478,392],
     'rotation': 0,
-    'date': ""
+
   },
   {
     'code':"Voet AL",
     'status': [
-      {'selected': false, 'severe': 0, 'anatomicName': 'Craniaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Lateraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Centraal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Mediaal'},
-      {'selected': false, 'severe': 0, 'anatomicName': 'Caudaal'},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
     ],
-    'diagnose': "",
-    'diagnoseCode':"",
-    'comment' : "",
-    'position' : [-1078,390],
+
+    'position' : [554,390],
     'rotation': 0,
-    'date': ""
+
   }
 ];

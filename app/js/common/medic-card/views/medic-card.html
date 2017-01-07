@@ -1,5 +1,4 @@
-<div class="medic-card">
-<div ng-repeat="point in vm.medicPoints" id="{{point.code}}" fi-medic-point medic-point="point"  ></div>
+<div ng-repeat="point in vm.medicPoints" id="{{point.code}}" fi-medic-point medic-point="point"></div>
 <div class="medic-card__input" ng-show="vm.openInput">
   <p>{{vm.popupTitle}}</p>
   <form name="inputForm" class="css-form" novalidate>
@@ -39,8 +38,18 @@
       </div>
       <div class="medic-card__input__buttons">
         <input type="button" ng-click="vm.cancel()" value="Anuleren" />
-        <input type="submit" ng-disabled="inputForm.$invalid" ng-click="vm.addMedic(disease)" value="Opslaan" />
+        <input type="submit" ng-disabled="inputForm.$invalid" ng-click="vm.saveMedic(disease)" value="Opslaan" />
       </div>
     </form>
 </div>
+<div ng-show="vm.openInfo" class="medic-card__click-overlay" ng-click="vm.openInfo = false">
+  <div class="medic-card__info"  style="left:{{vm.info.left}}px; top:{{vm.info.top}}px; box-shadow: 0px 0px 10px {{vm.info.color}};">
+    <a>{{vm.info.title}}</a></br></br>
+    <a>{{vm.info.injury}}</a></br>
+    <a>{{vm.info.comment}}</a></br></br>
+    <a>{{vm.info.since}}</a></br>
+    <div class="medic-card__info__buttons">
+      <input type="button" ng-click="vm.delete(vm.info.fullInjury)" value="Verwijderen" />
+      <input type="button" ng-click="vm.edit(vm.info.fullInjury)" value="Bewerken" />
+    </div>  </div>
 </div>

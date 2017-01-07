@@ -7,11 +7,21 @@ class MedicalService {
 		this.$rootScope = $rootScope;
 		this.config = config;
 	}
-
+	getColorForSeverity(severity){
+		switch(severity){
+			case "Light":
+				return '#16277e';
+			case "Moderate":
+				return '#f0fd21';
+			case "Severe":
+				return '#ff0000';
+		}
+	}
 	getInjuries(userId) {
 		return this.$http({url:this.config.api + '/api/injuries/' + userId,method:"GET", params:{_id:this.$rootScope.currentUser._id}}).then(
 			(result) => {
 				console.log("result getInjuries", result);
+				return result.data;
 			},
 			(error) => {
 				console.log('Couldn\'t get injuries for ' + userId);
@@ -19,16 +29,23 @@ class MedicalService {
 		);
 	}
 
-	/*updateUser(user) {
-		return this.$http.put(this.config.api + '/api/users/' + user._id, user).then(
+	deleteInjury(injury){
+		return this.$http.delete(this.config.api + '/api/injury/'+ injury._id).then(
+			(response) => {
+				return response;
+			}
+		)
+	}
+	updateInjury(injury) {
+		return this.$http.put(this.config.api + '/api/injury/' + injury._id, injury).then(
 			(result) => {
-				this.user = result.data;
+				return result;
 			},
 			(error) => {
 				console.log('Couldn\'t update user');
 			}
 		);
-	}*/
+	}
 
 	addInjury(injury) {
 		return this.$http.post(this.config.api + '/api/injury', injury).then(

@@ -5,7 +5,7 @@
   width:600px;
   height: 600px;
   margin-top:20px;
-
+  position:absolute;
 }
 
 /*
@@ -14,7 +14,7 @@
 .medic-point {
   width: 32px;
   height: 32px;
-  position: relative;
+  position: absolute;
 }
 /*.medic-point:hover {
   opacity: 1;
@@ -68,8 +68,8 @@
 * MEDIC INPUT
 */
 .medic-card__input {
-  position: relative;
-  top: -1589px;
+  position: absolute;;
+  top: 50px;
   left: 100px;
   background-color: rgba(255,255,255,0.85);
   width: 400px;
@@ -110,4 +110,27 @@
     border: 1px solid black;
     background: transparent;
     margin-top: 10px;
+}
+.medic-card__click-overlay{
+  width: 300%;
+  height: 1000px;
+}
+.medic-card__info {
+  position: absolute;
+  background-color: rgba(255,255,255,0.85);
+  width: 200px;
+  border-radius: 4px;
+  padding: 10px;
+}
+.medic-card__info a, .medic-card__input form a{
+  color: black;
+}
+.medic-card__info a:hover, .medic-card__input form a:hover{
+  color: black;
+  text-decoration: none;
+}
+
+.medic-card__info__buttons {
+  float:right;
+  margin-top:10px;
 }

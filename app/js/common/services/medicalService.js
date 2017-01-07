@@ -9,11 +9,11 @@ class MedicalService {
 	}
 	getColorForSeverity(severity){
 		switch(severity){
-			case "Light":
+			case "Licht":
 				return '#16277e';
-			case "Moderate":
+			case "Matig":
 				return '#f0fd21';
-			case "Severe":
+			case "Zwaar":
 				return '#ff0000';
 		}
 	}

@@ -28,7 +28,7 @@ class MedicCardCtrl {
     $scope.$on('newMedicPointSelected', function(event, data){
       me.popupTitle = data.point.code + " " + data.arrow;
       me.lastClickedPoint = data;
-      me.openInput = true;
+      (me.openInfo)?me.openInfo=false:me.openInput = true;
     });
 
     $scope.$on('showMedicPointInfo', function(event,data){
@@ -38,10 +38,12 @@ class MedicCardCtrl {
       me.openInfo =true;
       let injury =data.point.status[statusIndex].injury;
       me.info.fullInjury = injury;
+
       me.info.title = injury.code.replace("-", " ") + " " + injury.severity;
       me.info.injury = injury.tissue + " " + injury.pathology;
+
       me.info.comment = injury.comment;
-      me.info.since = injury.date;
+      me.info.since = new Date(injury.date);
 
       me.info.top = data.point.position[0] - 20;
       me.info.left = data.point.position[1] + 50;
@@ -132,11 +134,8 @@ class MedicCardCtrl {
     }
   }
   edit(injury){
-    console.log("EDIT");
     this.scope.disease = this.convertInjuryToDisease(injury);
     this.openInput = true;
-    //TODO open inputWindow in 'edit' mode
-
   }
   delete(injury){
     this.medicalService.deleteInjury(injury).then(

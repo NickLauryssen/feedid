@@ -107,8 +107,8 @@
 }
 
 .medic-card__input__buttons input{
-    border: 1px solid black;
-    background: transparent;
+    width: 30px;
+    height: 30px;
     margin-top: 10px;
 }
 .medic-card__click-overlay{
@@ -124,6 +124,7 @@
 }
 .medic-card__info a, .medic-card__input form a{
   color: black;
+  word-break: break-word;
 }
 .medic-card__info a:hover, .medic-card__input form a:hover{
   color: black;
@@ -133,4 +134,31 @@
 .medic-card__info__buttons {
   float:right;
   margin-top:10px;
+}
+
+/* BUTTONS **/
+.icon-button{
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: cover;
+  width: 26px;
+  height: 26px;
+  border: none;
+  margin-left: 10px;
+  opacity: 0.7;
+}
+.icon-button:hover {
+  opacity: 0.4;
+}
+.delete-button{
+  background-image: url('../img/icon_delete.svg');
+}
+.edit-button{
+  background-image: url('../img/icon_edit.svg');
+}
+.back-button{
+  background-image: url('../img/icon_close.svg');
+}
+.save-button {
+  background-image: url('../img/icon_save.svg');
 }

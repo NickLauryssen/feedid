@@ -33,6 +33,7 @@ class MedicCardCtrl {
 
     $scope.$on('showMedicPointInfo', function(event,data){
       me.lastClickedPoint = data;
+      
       let statusIndex = me.getStatusIndexFromAtomicName(data.arrow);
       //TODO
       me.openInfo =true;

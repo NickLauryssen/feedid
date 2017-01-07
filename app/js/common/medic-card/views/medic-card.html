@@ -45,7 +45,7 @@
 </div>
 <div ng-show="vm.openInfo" class="medic-card__click-overlay" ng-click="vm.openInfo = false">
   <div class="medic-card__info"  style="left:{{vm.info.left}}px; top:{{vm.info.top}}px; box-shadow: 0px 0px 10px {{vm.info.color}};">
-    <a>{{vm.info.title}}</a></br></br>
+    <h5>{{vm.info.title}}</h5>
     <a>{{vm.info.injury}}</a></br>
     <a>{{vm.info.comment}}</a></br></br>
     <a>{{vm.info.since | date : 'dd/MM/yyyy'}}</a></br>

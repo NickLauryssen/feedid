@@ -1,0 +1,56 @@
+<!-- https://www.iconfinder.com/icons/981079/basic_edit_pen_pencil_thiago_pontes_icon#size=128 -->
+<div ng-repeat="point in vm.medicPoints" id="{{point.code}}" fi-medic-point medic-point="point"></div>
+<div class="medic-card__input" ng-show="vm.openInput">
+  <p>{{vm.popupTitle}}</p>
+  <form name="inputForm" class="css-form" novalidate>
+      <div class="medic-card__input__col">
+        <a>Weefsel</a><br/>
+        <label><input type="radio" ng-model="disease.tissue" value="Spier" ng-required="!disease.tissue"/>Spier</label><br />
+        <label><input type="radio" ng-model="disease.tissue" value="Pees" ng-required="!disease.tissue"/>Pees</label><br />
+        <label><input type="radio" ng-model="disease.tissue" value="Zenuw" ng-required="!disease.tissue"/>Zenuw</label><br />
+        <label><input type="radio" ng-model="disease.tissue" value="Bot" ng-required="!disease.tissue"/>Bot</label><br />
+        <label><input type="radio" ng-model="disease.tissue" value="Gewricht" ng-required="!disease.tissue"/>Gewricht</label><br />
+        <label><input type="radio" ng-model="disease.tissue" value="Ligament" ng-required="!disease.tissue"/>Ligament</label><br />
+        <label><input type="radio" ng-model="disease.tissue" value="Orgaan" ng-required="!disease.tissue"/>Orgaan</label><br />
+        <label><input type="radio" ng-model="disease.tissue" value="Huid" ng-required="!disease.tissue"/>Huid</label><br />
+        <label><input type="radio" ng-model="disease.tissue" value="Ader" ng-required="!disease.tissue"/>Ader</label><br />
+        <label><input type="radio" ng-model="disease.tissue" value="Lymfe" ng-required="!disease.tissue"/>Lymfe</label><br />
+      </div>
+      <div class="medic-card__input__col">
+        <a>Pathology</a><br/>
+        <label><input type="radio" ng-model="disease.pathology" value="Ontsteking" ng-required="!disease.pathology"/>Ontsteking</label><br />
+        <label><input type="radio" ng-model="disease.pathology" value="Kneuzing" ng-required="!disease.pathology"/>Kneuzing</label><br />
+        <label><input type="radio" ng-model="disease.pathology" value="Breuk" ng-required="!disease.pathology"/>Breuk</label><br />
+        <label><input type="radio" ng-model="disease.pathology" value="Pijn algemeen" ng-required="!disease.pathology"/>Pijn algemeen</label><br />
+        <label><input type="radio" ng-model="disease.pathology" value="Verwijdering" ng-required="!disease.pathology"/>Verwijdering</label><br />
+        <label><input type="radio" ng-model="disease.pathology" value="dysfunctie" ng-required="!disease.pathology"/>Dysfunctie</label><br />
+        <label><input type="radio" ng-model="disease.pathology" value="Kanker" ng-required="!disease.pathology"/>Kanker</label><br />
+      </div>
+      <div class="medic-card__input__col">
+        <a>Ernst</a><br/>
+        <label><input type="radio" ng-model="disease.severity" value="Licht" ng-required="!disease.severity"/>Licht</label><br />
+        <label><input type="radio" ng-model="disease.severity" value="Matig" ng-required="!disease.severity"/>Matig</label><br />
+        <label><input type="radio" ng-model="disease.severity" value="Zwaar" ng-required="!disease.severity"/>Zwaar</label><br />
+      </div>
+      <br />
+      <div class="medic-card__input__textuals">
+        <label>Aanvullende Info:<br/><input type="text" ng-model="disease.comment" /></label><br />
+        <label>Begindatum:<br/><input type="date" ng-model="disease.date" required/></label><br />
+      </div>
+      <div class="medic-card__input__buttons">
+        <input type="button" ng-click="vm.cancel()" class="icon-button back-button" />
+        <input type="button" ng-disabled="inputForm.$invalid" ng-click="vm.saveMedic(disease)" class="icon-button save-button" />
+      </div>
+    </form>
+</div>
+<div ng-show="vm.openInfo" class="medic-card__click-overlay" ng-click="vm.openInfo = false">
+  <div class="medic-card__info"  style="left:{{vm.info.left}}px; top:{{vm.info.top}}px; box-shadow: 0px 0px 10px {{vm.info.color}};">
+    <h5>{{vm.info.title}}</h5>
+    <a>{{vm.info.injury}}</a></br>
+    <a>{{vm.info.comment}}</a></br></br>
+    <a>{{vm.info.since | date : 'dd/MM/yyyy'}}</a></br>
+    <div class="medic-card__info__buttons">
+      <input type="button" ng-click="vm.delete(vm.info.fullInjury)" class="icon-button delete-button" />
+      <input type="button" ng-click="vm.edit(vm.info.fullInjury)" class="icon-button edit-button"/>
+    </div>  </div>
+</div>

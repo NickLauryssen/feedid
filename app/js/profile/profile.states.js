@@ -19,5 +19,8 @@ function config($stateProvider, templateProvider) {
 	})
 	.state('profile.admin', {
 			'templateUrl': templateProvider.formatUrl('administrator', 'profile')
+	})
+	.state('profile.medic', {
+			'templateUrl': templateProvider.formatUrl('medic-card', 'profile')
 	});
 }

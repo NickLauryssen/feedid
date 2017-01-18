@@ -50,7 +50,7 @@
 }
 
 #content-page {
-	overflow: auto;
+	overflow: hidden;
 	padding-left: 5%;
 }
 

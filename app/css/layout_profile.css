@@ -58,32 +58,6 @@
     margin-bottom: 20px;
 }
 
-.administrator label {
-    display: inline-block;
-    float: left;
-    clear: left;
-    width: 200px;
-    text-align: left;
-    font-weight: normal;
-}
-
-.administrator input, select {
-    display: inline-block;
-    float: left;
-		width:300px;
-}
-
-.administrator input.street{
-	width: 250px;
-}
-.administrator input.streetnr{
-	width: 50px;
-}
-#btn_register {
-    clear: both;
-    float: left;
-}
-
 /* Edit profile */
 #editor {
     font-size: 8pt;

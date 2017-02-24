@@ -1,0 +1,39 @@
+#administratorView {
+  background-color: #eeeeee;
+  height: 80%;
+  width: 100%;
+}
+
+.administrator {
+  width: 50%;
+  margin:0px auto;
+  padding:1px;
+
+}
+
+
+.administrator label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 200px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.administrator input, select {
+    display: inline-block;
+    float: left;
+		width:300px;
+}
+
+.administrator input.street{
+	width: 250px;
+}
+.administrator input.streetnr{
+	width: 50px;
+}
+#btn_register {
+    clear: both;
+    float: right;
+}

@@ -1,0 +1,37 @@
+#hamburger-menu{
+  position: absolute;
+  right: 15px;
+}
+#hamburger-menu button {
+  float:right;
+  background-color: transparent;
+  border:none;
+  background-image: url('../img/hamburger-menu.svg') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 43px;
+  width: 43px;
+}
+
+#hamburger-menu .btn:focus {
+  outline:none;
+}
+
+#hamburger-menu ul{
+  list-style-type: none;
+  margin-top: 43px;
+  margin-bottom: 10px;
+  background-color: rgba(255,255,255,1);
+  border-radius: 4px;
+  color: #28444b;
+  width: 100px;
+}
+
+#hamburger-menu ul li{
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.05);
+  text-align: right;
+  padding-right: 7px;
+  margin-left: -40px;
+  margin-bottom: 2px;
+}

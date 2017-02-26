@@ -10,33 +10,40 @@ class MedicPointCtrl {
       },true);
   }
 
+  getMostSevereInjury(statusIndex){
+    var mostSevere = "Licht";
+    for(let injury of this.medicPoint.status[statusIndex].injury){
+      if(injury.severity > mostSevere) mostSevere = injury.severity;
+    }
+    return mostSevere;
+  }
   setArrowStatus(){
     //UI
     if(this.medicPoint.status[0].selected){
-      this.topArrowBg = "../img/medic-top"+ "-" + this.medicPoint.status[0].injury.severity.toLowerCase() +".png";
+      this.topArrowBg = "../img/medic-top"+ "-" + this.getMostSevereInjury(0).toLowerCase() +".png";
     }else{
       this.topArrowBg = "../img/medic-top.png";
     }
 
     if(this.medicPoint.status[1].selected){
-      this.leftArrowBg = "../img/medic-left"+ "-" + this.medicPoint.status[1].injury.severity.toLowerCase()+".png";
+      this.leftArrowBg = "../img/medic-left"+ "-" + this.getMostSevereInjury(1).toLowerCase()+".png";
     }else{
       this.leftArrowBg = "../img/medic-left.png";
     }
 
     if(this.medicPoint.status[2].selected){
-      this.midArrowBg = this.medicalService.getColorForSeverity(this.medicPoint.status[2].injury.severity);
+      this.midArrowBg = this.medicalService.getColorForSeverity(this.getMostSevereInjury(2).toLowerCase);
     }else{
       this.midArrowBg = "black";
     }
 
     if(this.medicPoint.status[3].selected){
-      this.rightArrowBg = "../img/medic-right"+ "-" + this.medicPoint.status[3].injury.severity.toLowerCase()+".png";
+      this.rightArrowBg = "../img/medic-right"+ "-" + this.getMostSevereInjury(3).toLowerCase() +".png";
     }else{
       this.rightArrowBg = "../img/medic-right.png";
     }
     if(this.medicPoint.status[4].selected){
-      this.bottomArrowBg = "../img/medic-bottom"+ "-" + this.medicPoint.status[4].injury.severity.toLowerCase()+".png";
+      this.bottomArrowBg = "../img/medic-bottom"+ "-" + this.getMostSevereInjury(4).toLowerCase()+".png";
     }else{
       this.bottomArrowBg = "../img/medic-bottom.png";
     }

@@ -33,23 +33,18 @@ class MedicCardCtrl {
 
     $scope.$on('showMedicPointInfo', function(event,data){
       me.lastClickedPoint = data;
-      
       let statusIndex = me.getStatusIndexFromAtomicName(data.arrow);
       //TODO
       me.openInfo =true;
-      let injury =data.point.status[statusIndex].injury;
-      me.info.fullInjury = injury;
 
-      me.info.title = injury.code.replace("-", " ") + " " + injury.severity;
-      me.info.injury = injury.tissue + " " + injury.pathology;
-
-      me.info.comment = injury.comment;
-      me.info.since = new Date(injury.date);
-
+      let injuries = data.point.status[statusIndex].injury;
+      me.info.fullInjury = injuries;
+      me.info.title = injuries[0].code.replace("-", " ") + " " + me.getMostSevereInjury(injuries);
+      // date of earliest injury
+      me.info.since = new Date(injuries[0].date);
       me.info.top = data.point.position[0] - 20;
       me.info.left = data.point.position[1] + 50;
-
-      me.info.color = me.medicalService.getColorForSeverity(injury.severity);
+      me.info.color = me.medicalService.getColorForSeverity(me.getMostSevereInjury(injuries));
     });
 
     this.medicalService.getInjuries(this.selectedUserId).then((data)=>
@@ -122,6 +117,13 @@ class MedicCardCtrl {
       }
       return;
   }
+  getMostSevereInjury(injuries){
+    var mostSevere = "Licht";
+    for(let injury of injuries){
+      if(injury.severity > mostSevere) mostSevere = injury.severity;
+    }
+    return mostSevere;
+  }
   updateMedicPoint(injury, deleted = false){
     // reference code is the 'code' value in the medic Point
     var refCode = injury.code.split("-")[0];
@@ -129,10 +131,34 @@ class MedicCardCtrl {
     for(point of this.medicPoints){
       if(refCode == point.code){
         let statusIndex = this.getStatusIndexFromAtomicName(refArrow);
+
+        // Point's selection is gone when no more injury in DB for this point.
         point.status[statusIndex].selected = !deleted;
-        point.status[statusIndex].injury = injury;
+        // we only check whether the array size is greater than 1 when we deleted an item. otherwise the selection indication is wrong on when only one injury available.
+        if(deleted && point.status[statusIndex].injury.length > 1) {
+          point.status[statusIndex].selected =true;
+        }
+
+        for(let i = 0; i<point.status[statusIndex].injury.length; i++){
+          if(point.status[statusIndex].injury[i]._id == injury._id){
+            // if updateMedicPoint is called after delete, splice the injury from the array.
+            if(deleted){
+              point.status[statusIndex].injury.splice(i,1);
+              return;
+            }
+            // if it was an edit, just replace it.
+            point.status[statusIndex].injury[i] = injury;
+            return;
+          }
+        }
+        // if no injury was found, this means it's a new injury, add it to the list of this
+        point.status[statusIndex].injury.push(injury);
       }
     }
+  }
+  add(){
+    //me.openInfo = false;
+    this.openInput = true
   }
   edit(injury){
     this.scope.disease = this.convertInjuryToDisease(injury);

@@ -100,7 +100,12 @@
 		};
 
 		$rootScope.goToAdmin = () => {
-			$state.go('administrator');
+				$state.go('administrator');
+				$rootScope.isCollapsed = true;
+		}
+
+		$rootScope.goToProfile = () => {
+			$state.go('profile', { 'userId': $rootScope.currentUser._id, 'appId': $rootScope.app._id });
 			$rootScope.isCollapsed = true;
 		}
 

@@ -2,7 +2,10 @@
 
 class AdministratorCtrl {
 
-    constructor($rootScope, userService, authService) {
+    constructor($rootScope, $location, userService, authService) {
+      if($rootScope.loggedin != true ){
+        $location.url('/');
+      }
         this.$rootScope = $rootScope;
         this.authService = authService;
     }

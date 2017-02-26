@@ -21,7 +21,6 @@ class TestService {
 	}
 
 	getResults(userId, requester) {
-		console.log("UID", userId, "REQ", requester);
 		return this.$http.get(this.config.api + '/api/testResults/' + userId + '/' + requester).then(
 			(result) => {
 				return result;

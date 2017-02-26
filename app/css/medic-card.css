@@ -150,6 +150,22 @@
 .icon-button:hover {
   opacity: 0.4;
 }
+.icon-button--small{
+  width: 16px;
+  height: 16px;
+  float: right;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+.info-injury-item{
+  width: 100%;
+  margin-bottom:2px;
+}
+.injury-comment{
+  margin-left: 10px;
+  font-size: 10px;
+  font-family: monospace;
+}
 .delete-button{
   background-image: url('../img/icon_delete.svg');
 }
@@ -161,4 +177,7 @@
 }
 .save-button {
   background-image: url('../img/icon_save.svg');
+}
+.add-button {
+  background-image: url('../img/icon_add.svg');
 }

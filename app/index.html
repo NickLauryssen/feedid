@@ -37,9 +37,18 @@
 						{{currentUser.lastname}}
 					</p>
 					</a>
-				</div>
-				<div id="logout" class="item">
-					<img ng-click="logout()" alt="Logout" src="./img/ic_logout.png">
+					<div id="hamburger-menu">
+					<button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed"></button>
+						<div uib-collapse="isCollapsed">
+							<div class="">
+								<ul>
+									<li ng-click="goToProfile()">Profile App</li>
+									<li ng-click="goToAdmin()">Admin</li>
+									<li ng-click="logout()" >Logout</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

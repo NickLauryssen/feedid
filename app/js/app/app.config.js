@@ -16,6 +16,8 @@
 		let checkLoggedin = ($q, $timeout, $http, $injector, $rootScope) => {
 			var deferred = $q.defer();
 
+			//$scope.isCollapsed = false;
+
 			$http.get(url + '/loggedin').success((user) => {
 				if (user !== '0'){
 					$rootScope.loggedin = true;
@@ -64,15 +66,21 @@
 	        'controller': 'PasswordCtrl',
 	        'templateUrl': templateProvider.formatUrl('new', 'app')
 	    })
-		.state('app.admin',
+			.state('administrator', {
+					'url': '/admin',
+					'templateUrl': templateProvider.formatUrl('administrator', 'administrator'),
+					'controller': 'AdministratorCtrl',
+					'controllerAs': 'vm'
+			})
+	/*	.state('app.admin',
 		{
 			'url': '/admin',
 			'controller': 'AdminCtrl',
 			'templateUrl': templateProvider.formatUrl('admin', 'app')
 			/*resolve: {
 	    			loggedin: checkLoggedin
-	    		}*/
-		});
+	    		}
+		});*/
 
 		// Default redirect
 		$urlRouterProvider.otherwise('/');
@@ -82,6 +90,7 @@
 		const url = "https://feedid.com/backend";
 		$rootScope.message = '';
 		$rootScope.loggedin = false;
+		$rootScope.isCollapsed = true;
 
 		$rootScope.logout = () => {
 			$rootScope.message = 'Logged out.';
@@ -89,6 +98,16 @@
 			$rootScope.loggedin = false;
 			$location.url('/');
 		};
+
+		$rootScope.goToAdmin = () => {
+				$state.go('administrator');
+				$rootScope.isCollapsed = true;
+		}
+
+		$rootScope.goToProfile = () => {
+			$state.go('profile', { 'userId': $rootScope.currentUser._id, 'appId': $rootScope.app._id });
+			$rootScope.isCollapsed = true;
+		}
 
 		$rootScope.login = () => {
 	      $http({method: "POST", url: url + '/login',data: {

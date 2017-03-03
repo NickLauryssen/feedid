@@ -57,15 +57,6 @@ class PanelCtrl {
 		});
 	}
 
-	//register client and add client to database
-    register() {
-        this.userService.addUser(this.client).then(
-            () => {
-                this.client = {};
-            }
-        );
-    }
-
 }
 
 angular.module('feedID.profile').controller('panelCtrl', PanelCtrl);

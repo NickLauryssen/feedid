@@ -110,6 +110,7 @@
     width: 30px;
     height: 30px;
     margin-top: 10px;
+
 }
 .medic-card__click-overlay{
   width: 300%;
@@ -118,7 +119,7 @@
 .medic-card__info {
   position: absolute;
   background-color: rgba(255,255,255,0.85);
-  width: 200px;
+  width: 300px;
   border-radius: 4px;
   padding: 10px;
 }
@@ -132,8 +133,15 @@
 }
 
 .medic-card__info__buttons {
-  float:right;
-  margin-top:10px;
+
+  text-align: right;
+  width: 100%;
+  padding-top: 6px;
+  border-top: 1px solid rgba(0,0,0,0.1)
+}
+
+.medic-card__info h5 {
+  margin-bottom: 25px;
 }
 
 /* BUTTONS **/
@@ -150,6 +158,27 @@
 .icon-button:hover {
   opacity: 0.4;
 }
+.icon-button--small{
+  width: 16px;
+  height: 16px;
+  float: right;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+.info-injury-item{
+  width: 100%;
+  margin-bottom:10px;
+  border-top: 1px solid rgba(0,0,0,0.1)
+}
+.injury-comment{
+  margin-left: 10px;
+  font-size: 10px;
+  font-family: monospace;
+}
+.injury-date {
+  margin-left: 4px;
+  font-size: 9px;
+}
 .delete-button{
   background-image: url('../img/icon_delete.svg');
 }
@@ -161,4 +190,7 @@
 }
 .save-button {
   background-image: url('../img/icon_save.svg');
+}
+.add-button {
+  background-image: url('../img/icon_add.svg');
 }

@@ -17,9 +17,9 @@ function config($stateProvider, templateProvider) {
 			'controller': 'PersonCtrl',
 			'controllerAs': 'vm'
 	})
-	.state('profile.admin', {
+	/*.state('profile.admin', {
 			'templateUrl': templateProvider.formatUrl('administrator', 'profile')
-	})
+	})*/
 	.state('profile.medic', {
 			'templateUrl': templateProvider.formatUrl('medic-card', 'profile')
 	});

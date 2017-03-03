@@ -2,11 +2,11 @@ var medicPoints = [
   {
     'code':"Hoofd V",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury':{}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury':[]},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
     'position' : [38,146],
     'rotation': 0,
@@ -14,11 +14,11 @@ var medicPoints = [
   {
     'code':"Hals",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
     'position' : [80,146],
     'rotation': 0,
@@ -26,11 +26,11 @@ var medicPoints = [
   {
     'code':"Schouder VR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [104,102],
@@ -40,11 +40,11 @@ var medicPoints = [
   {
     'code':"Arm B VR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [150,85],
@@ -54,11 +54,11 @@ var medicPoints = [
   {
     'code':"Elleboog VR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [182,70],
@@ -68,11 +68,11 @@ var medicPoints = [
   {
     'code':"Arm O VR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [220,52],
@@ -82,11 +82,11 @@ var medicPoints = [
   {
     'code':"Hand VR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [258,31],
@@ -96,11 +96,11 @@ var medicPoints = [
   {
     'code':"Schouder VL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [103,190],
@@ -110,11 +110,11 @@ var medicPoints = [
   {
     'code':"Arm B VL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [148,207],
@@ -124,11 +124,11 @@ var medicPoints = [
   {
     'code':"Elleboog VL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [181,222],
@@ -138,11 +138,11 @@ var medicPoints = [
   {
     'code':"Arm O VL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [222,240],
@@ -152,11 +152,11 @@ var medicPoints = [
   {
     'code':"Hand VL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [258,261],
@@ -166,11 +166,11 @@ var medicPoints = [
   {
     'code':"Borst",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [125,146],
@@ -180,11 +180,11 @@ var medicPoints = [
   {
     'code':"Buik B",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [179,146],
@@ -194,11 +194,11 @@ var medicPoints = [
   {
     'code':"Buik O",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [222,146],
@@ -208,11 +208,11 @@ var medicPoints = [
   {
     'code':"Heup VR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [258,105],
@@ -222,11 +222,11 @@ var medicPoints = [
   {
     'code':"Bekken V",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [258,146],
@@ -236,11 +236,11 @@ var medicPoints = [
   {
     'code':"Heup VL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [258,186],
@@ -250,11 +250,11 @@ var medicPoints = [
   {
     'code':"Been B VR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [336,114],
@@ -264,11 +264,11 @@ var medicPoints = [
   {
     'code':"Knie VR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [405,115],
@@ -278,11 +278,11 @@ var medicPoints = [
   {
     'code':"Been O VR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [478,112],
@@ -292,11 +292,11 @@ var medicPoints = [
   {
     'code':"Voet VR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [548,108],
@@ -306,11 +306,11 @@ var medicPoints = [
   {
     'code':"Been B VL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [336,180],
@@ -320,11 +320,11 @@ var medicPoints = [
   {
     'code':"Knie VL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [405,178],
@@ -334,11 +334,11 @@ var medicPoints = [
   {
     'code':"Been O VL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [478,180],
@@ -348,11 +348,11 @@ var medicPoints = [
   {
     'code':"Voet VL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [548,183],
@@ -362,11 +362,11 @@ var medicPoints = [
   {
     'code':"Hoofd A",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [30,428],
@@ -376,11 +376,11 @@ var medicPoints = [
   {
     'code':"Nek",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [75,428],
@@ -390,11 +390,11 @@ var medicPoints = [
   {
     'code':"Schouder AR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [100,474],
@@ -404,11 +404,11 @@ var medicPoints = [
   {
     'code':"Arm B AR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [146,490],
@@ -418,11 +418,11 @@ var medicPoints = [
   {
     'code':"Elleboog AR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [185,506],
@@ -432,11 +432,11 @@ var medicPoints = [
   {
     'code':"Arm O AR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [221,521],
@@ -446,11 +446,11 @@ var medicPoints = [
   {
     'code':"Hand AR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [262,539],
@@ -460,11 +460,11 @@ var medicPoints = [
   {
     'code':"Schouder AL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [100,381],
@@ -474,11 +474,11 @@ var medicPoints = [
   {
     'code':"Arm B AL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [146,364],
@@ -488,11 +488,11 @@ var medicPoints = [
   {
     'code':"Elleboog AL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [185,349],
@@ -502,11 +502,11 @@ var medicPoints = [
   {
     'code':"Arm O AL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [221,332],
@@ -516,11 +516,11 @@ var medicPoints = [
   {
     'code':"Hand AL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [262,315],
@@ -530,11 +530,11 @@ var medicPoints = [
   {
     'code':"Rug B",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [117,428],
@@ -544,11 +544,11 @@ var medicPoints = [
   {
     'code':"Rug M",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [174,428],
@@ -558,11 +558,11 @@ var medicPoints = [
   {
     'code':"Rug O",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [225,429],
@@ -572,11 +572,11 @@ var medicPoints = [
   {
     'code':"Heup AR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [270,467],
@@ -586,11 +586,11 @@ var medicPoints = [
   {
     'code':"Bekken A",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [270,428],
@@ -600,11 +600,11 @@ var medicPoints = [
   {
     'code':"Heup AL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [270,388],
@@ -614,11 +614,11 @@ var medicPoints = [
   {
     'code':"Been B AR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [336,460],
@@ -628,11 +628,11 @@ var medicPoints = [
   {
     'code':"Knie AR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [404,460],
@@ -642,11 +642,11 @@ var medicPoints = [
   {
     'code':"Been O AR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [478,462],
@@ -656,11 +656,11 @@ var medicPoints = [
   {
     'code':"Voet AR",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [554,466],
@@ -670,11 +670,11 @@ var medicPoints = [
   {
     'code':"Been B AL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [336,396],
@@ -684,11 +684,11 @@ var medicPoints = [
   {
     'code':"Knie AL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [404,397],
@@ -698,11 +698,11 @@ var medicPoints = [
   {
     'code':"Been O AL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [478,392],
@@ -712,11 +712,11 @@ var medicPoints = [
   {
     'code':"Voet AL",
     'status': [
-      {'selected': false, 'anatomicName': 'Craniaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Lateraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Centraal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Mediaal', 'injury': {}},
-      {'selected': false, 'anatomicName': 'Caudaal', 'injury': {}},
+      {'selected': false, 'anatomicName': 'Craniaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Lateraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Centraal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Mediaal', 'injury': []},
+      {'selected': false, 'anatomicName': 'Caudaal', 'injury': []},
     ],
 
     'position' : [554,390],

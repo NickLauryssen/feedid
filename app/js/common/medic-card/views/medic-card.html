@@ -47,15 +47,13 @@
 <div ng-show="vm.openInfo" class="medic-card__click-overlay" ng-click="vm.openInfo = false">
   <div class="medic-card__info"  style="left:{{vm.info.left}}px; top:{{vm.info.top}}px; box-shadow: 0px 0px 10px {{vm.info.color}};">
     <h5>{{vm.info.title}}</h5>
-    <div ng-repeat="injury in vm.info.fullInjury track by $index" class="info-injury-item">
-      <a>{{injury.tissue + " " + injury.pathology}}</a>
+    <div ng-repeat="injury in vm.info.fullInjury track by $index" class="info-injury-item" >
+      <a>{{injury.tissue + " " + injury.pathology}}</a><a class="injury-date">({{injury.date | date : 'dd/MM/yyyy'}})</a>
       <input type="button" ng-click="vm.delete(injury)" class="icon-button delete-button icon-button--small" />
       <input type="button" ng-click="vm.edit(injury)" class="icon-button edit-button icon-button--small"/>
       <br />
-      <a class="injury-comment">{{injury.comment}}</a>
+      <a class="injury-comment">{{injury.comment}}</a>      
     </div>
-    <br />
-    <a>{{vm.info.since | date : 'dd/MM/yyyy'}}</a></br>
     <div class="medic-card__info__buttons">
       <input type="button" ng-click="vm.add()" class="icon-button add-button"/>
     </div>  </div>

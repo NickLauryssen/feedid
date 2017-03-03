@@ -38,6 +38,9 @@ class MedicCardCtrl {
       me.openInfo =true;
 
       let injuries = data.point.status[statusIndex].injury;
+      for(let i of injuries){
+        i.color = me.medicalService.getColorForSeverity(i.severity);
+      }
       me.info.fullInjury = injuries;
       me.info.title = injuries[0].code.replace("-", " ") + " " + me.getMostSevereInjury(injuries);
       // date of earliest injury

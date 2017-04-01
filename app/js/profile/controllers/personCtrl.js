@@ -2,14 +2,10 @@
 
 class PersonCtrl {
 
-    constructor($rootScope, $stateParams, userService, countryService, authService, testService) {
+    constructor($rootScope, $stateParams, userService, authService, testService) {
         this.$rootScope = $rootScope;
-        this.countryService = countryService;
         this.authService = authService;
         this.testService = testService;
-
-        this.countries = [{country: 'test'}];
-
 
         if($stateParams.userId != this.$rootScope.currentUser._id){
           userService.getUser($stateParams.userId, $stateParams.appId).then(

@@ -2,17 +2,23 @@
 
 class AdministratorCtrl {
 
-    constructor($rootScope, $location, userService, authService) {
+    constructor($rootScope, $location, userService, countryService, authService) {
       if($rootScope.loggedin != true ){
         $location.url('/');
       }
         this.$rootScope = $rootScope;
         this.authService = authService;
+        this.userService = userService;
+        this.countryService= countryService;
+        this.countries = [];
+        this.init();
     }
 
 
     init() {
-
+        this.countryService.getCountries().then((countries)=>{
+          this.countries = countries;
+        })
     }
 
     //register client and add client to database

@@ -1,6 +1,11 @@
 #hamburger-menu{
+  right: 15px;
+}
+
+#hamburger-menu > div {
   position: absolute;
   right: 15px;
+  top:55px;
 }
 #hamburger-menu button {
   float:right;
@@ -19,7 +24,6 @@
 
 #hamburger-menu ul{
   list-style-type: none;
-  margin-top: 43px;
   margin-bottom: 10px;
   background-color: rgba(255,255,255,1);
   border-radius: 4px;

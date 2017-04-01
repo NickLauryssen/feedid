@@ -21,7 +21,7 @@
 						<tr>
 							<td><input type="text" path="email" ng-model="user.username"/></td>
 							<td><input type="password" path="password" ng-model="user.pass" /></td>
-							<td class="separator"><button type="submit">Aanmelden</button></td>
+							<td class="separator"><button class="aquaButton" style="margin-top: -15px;"type="submit">Aanmelden</button></td>
 						</tr>
 					</table>
 				</form>
@@ -30,7 +30,7 @@
 			<div class="menu" ng-show="loggedin">
 				<fi-search></fi-search>
 				<div class="separator" id="loginuser">
-					<a href="#/user/{{currentUser._id}}/{{app._id}}">
+					<a href="#!/user/{{currentUser._id}}/{{app._id}}">
 					<img alt="profile picture" src="https://feedid.com/backend/images/{{currentUser.picture}}" />
 					<p>
 						{{currentUser.firstname}}<br />

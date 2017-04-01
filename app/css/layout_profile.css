@@ -21,6 +21,8 @@
 
 #sidemenu {
 	float: left;
+	border-right: 1px solid rgba(0,0,0,0.05);
+  height: calc( 100% - 40px );
 }
 
 #sidemenu .profilepicture{

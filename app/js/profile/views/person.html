@@ -27,7 +27,7 @@
                 <div class="hr"></div>
                 <h2>Informatie</h2>
                 <p>Geslacht: {{user.sex}}</p>
-                <p>{{user.dateofbirth}}</p>
+                <p>Verjaardag: {{user.dateofbirth | date : 'dd/MM/yyyy'}}</p>
                 <div class="hr"></div>
                 <h2>Adres</h2>
                 <p>
@@ -38,6 +38,7 @@
                 <div class="hr"></div>
                 <h2>E-mailadres</h2>
                 <p>{{user.email}}</p>
+                <div class="hr"></div>
                 <h2>Gsm-nummer</h2>
                 <p>{{user.mobile}}</p>
                 <button ng-show="vm.releaseBtn" ng-click="vm.sendConfirmEmail()">Stuur bevestigingsmail</button>

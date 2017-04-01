@@ -12,6 +12,7 @@ class CountryService {
 		return this.$http.get(this.config.api + '/api/countries').then(
 			(result) => {
 				this.countries = result.data;
+				return this.countries;
 			},
 			(error) => {
 				console.log('Couldn\'t retrieve countries from FeedID');
